@@ -1,55 +1,39 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import TrackList from "./components/tracklist/TrackList";
 import SearchBar from "./components/searchBar/SearchBar";
+import options from "./components/util/options";
 import "./App.css";
-
-const tracks = [
-  {
-    id: 1,
-    name: "Bohemian Rhapsody",
-    artist: "Queen",
-    album: "A Night at the Opera",
-  },
-  {
-    id: 2,
-    name: "Stairway to Heaven",
-    artist: "Led Zeppelin",
-    album: "Led Zeppelin IV",
-  },
-  {
-    id: 3,
-    name: "Hotel California",
-    artist: "Eagles",
-    album: "Hotel California",
-  },
-  {
-    id: 4,
-    name: "Hey Jude",
-    artist: "The Beatles",
-    album: "Single",
-  },
-  {
-    id: 5,
-    name: "Smells Like Teen Spirit",
-    artist: "Nirvana",
-    album: "Nevermind",
-  },
-  {
-    id: 6,
-    name: "Imagine",
-    artist: "John Lennon",
-    album: "Imagine",
-  },
-];
+import { useState } from "react";
 
 function App() {
+  const [tracks, setTracks] = useState([]);
+
+  const handleSearch = async (query) => {
+    try {
+      const resp = await fetch(
+        `https://spotify23.p.rapidapi.com/search/?q=${query}&type=multi&offset=0&limit=10&numberOfTopResults=2`,
+        options
+      );
+      if (!resp.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await resp.json();
+      const newTracks = data.tracks.items.map((item) => ({
+        id: item.data.id,
+        name: item.data.name,
+        artist: item.data.artists.items[0].profile.name,
+        album: item.data.albumOfTrack.name,
+      }));
+      setTracks(newTracks);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
-    <>
-      <SearchBar />
+    <div>
+      <SearchBar handleSearch={handleSearch} />
       <TrackList tracks={tracks} />
-    </>
+    </div>
   );
 }
 
