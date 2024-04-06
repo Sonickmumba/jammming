@@ -6,13 +6,18 @@ import { useState } from "react";
 
 function App() {
   const [tracks, setTracks] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSearch = async (query) => {
+    setLoading(true);
+    setError(null);
     try {
       const resp = await fetch(
         `https://spotify23.p.rapidapi.com/search/?q=${query}&type=multi&offset=0&limit=10&numberOfTopResults=2`,
         options
       );
+
       if (!resp.ok) {
         throw new Error("Network response was not ok");
       }
@@ -25,14 +30,22 @@ function App() {
       }));
       setTracks(newTracks);
     } catch (error) {
-      console.error("Error:", error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div>
       <SearchBar handleSearch={handleSearch} />
-      <TrackList tracks={tracks} />
+      {loading ? (
+        <p>Loading...</p>
+      ) : error ? (
+        <p>Error: {error}</p>
+      ) : (
+        <TrackList tracks={tracks} />
+      )}
     </div>
   );
 }
