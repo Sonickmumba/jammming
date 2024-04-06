@@ -2,6 +2,7 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import TrackList from "./components/tracklist/TrackList";
+import SearchBar from "./components/searchBar/SearchBar";
 import "./App.css";
 
 const tracks = [
@@ -46,6 +47,7 @@ const tracks = [
 function App() {
   return (
     <>
+      <SearchBar />
       <TrackList tracks={tracks} />
     </>
   );
