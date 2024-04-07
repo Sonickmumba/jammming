@@ -1,5 +1,6 @@
 import TrackList from "./components/tracklist/TrackList";
 import SearchBar from "./components/searchBar/SearchBar";
+import Playlist from "./components/playlist/Playlist";
 import options from "./components/util/options";
 import "./App.css";
 import { useState } from "react";
@@ -7,7 +8,18 @@ import { useState } from "react";
 function App() {
   const [tracks, setTracks] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [playlist, setPlaylist] = useState([]);
   const [error, setError] = useState(null);
+
+  const handleClick = (e, id) => {
+    e.preventDefault();
+    setPlaylist((prev) => {
+      const trackToAdd = tracks.find((track) => track.id === id);
+      return [...prev, trackToAdd];
+    });
+    const updatedTracks = tracks.filter((track) => track.id !== id);
+    setTracks(updatedTracks);
+  };
 
   const handleSearch = async (query) => {
     setLoading(true);
@@ -39,13 +51,18 @@ function App() {
   return (
     <div>
       <SearchBar handleSearch={handleSearch} />
-      {loading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>Error: {error}</p>
-      ) : (
-        <TrackList tracks={tracks} />
-      )}
+      <div>
+        <div className="container">
+          {loading ? (
+            <p>Loading...</p>
+          ) : error ? (
+            <p>Error: {error}</p>
+          ) : (
+            <TrackList tracks={tracks} handleClick={handleClick} />
+          )}
+          <Playlist playlist={playlist} />
+        </div>
+      </div>
     </div>
   );
 }
