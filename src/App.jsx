@@ -17,13 +17,13 @@ function App() {
       const trackToAdd = tracks.find((track) => track.id === id);
       return [...prev, trackToAdd];
     });
-    const updatedTracks = tracks.filter((track) => track.id !== id);
-    setTracks(updatedTracks);
   };
 
   const handleSearch = async (query) => {
+    if (query === "") return;
     setLoading(true);
     setError(null);
+
     try {
       const resp = await fetch(
         `https://spotify23.p.rapidapi.com/search/?q=${query}&type=multi&offset=0&limit=10&numberOfTopResults=2`,

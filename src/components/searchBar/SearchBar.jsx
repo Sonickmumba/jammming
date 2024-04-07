@@ -8,6 +8,7 @@ const SearchBar = ({ handleSearch }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     handleSearch(query);
+    setQuery("");
   };
 
   const handleChange = (e) => {
