@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 const TrackList = ({ tracks, handleClick }) => {
   return (
-    <div className="main-container">
+    <div className="results-container">
       <div className="results">Results</div>
       {tracks.map((track) => (
         <div className="card" key={track.id}>

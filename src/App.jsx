@@ -49,20 +49,20 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app-contrainer">
       <SearchBar handleSearch={handleSearch} />
-      <div>
-        <div className="container">
-          {loading ? (
-            <p>Loading...</p>
-          ) : error ? (
-            <p>Error: {error}</p>
-          ) : (
-            <TrackList tracks={tracks} handleClick={handleClick} />
-          )}
-          <Playlist playlist={playlist} />
-        </div>
+      {/* <div> */}
+      <div className="track-play-list-container">
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error: {error}</p>
+        ) : (
+          <TrackList tracks={tracks} handleClick={handleClick} />
+        )}
+        <Playlist playlist={playlist} />
       </div>
+      {/* </div> */}
     </div>
   );
 }

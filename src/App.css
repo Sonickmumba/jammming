@@ -1,16 +1,40 @@
 /* css */
-.container {
+
+.app-contrainer {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
-.main-container {
+.track-play-list-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 90%;
+}
+
+.results-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  width: 400px;
+  height: 85vh;
   background-color: aqua;
+  overflow: scroll;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 85vh;
+  background-color: aqua;
+  overflow: scroll;
+  box-sizing: border-box;
 }
 
 .results {
