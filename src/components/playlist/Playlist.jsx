@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
+
 const Playlist = ({ playlist }) => {
   return (
     <div className="list-container">
-      {/* <div className="results">Results</div> */}
       {playlist.map((item) => (
         <div className="card" key={item.id}>
           <h3>{item.name}</h3>
