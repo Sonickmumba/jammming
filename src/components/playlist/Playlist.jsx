@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 
 const Playlist = ({ playlist, handleRemoveTrack }) => {
   const [myPlaylist, setMyPlaylist] = useState([]);
+  const [myPlaylistName, setMyPlaylistName] = useState("");
+  const [savePlaylist, setSavePlaylist] = useState([]);
 
   useEffect(() => {
     setMyPlaylist(playlist);
@@ -12,7 +14,18 @@ const Playlist = ({ playlist, handleRemoveTrack }) => {
   const handleSubmitPlaylist = (e) => {
     e.preventDefault();
     console.log(myPlaylist);
+    const newPlaylist = {
+      id: new Date().toISOString(),
+      name: myPlaylistName,
+      playlist: myPlaylist,
+    };
+    setSavePlaylist((prev) => [...prev, newPlaylist]);
   };
+
+  const handleChange = (e) => {
+    setMyPlaylistName(e.target.value);
+  };
+  console.log(savePlaylist);
 
   return (
     <form className="list-container" onSubmit={handleSubmitPlaylist}>
@@ -21,6 +34,8 @@ const Playlist = ({ playlist, handleRemoveTrack }) => {
         type="text"
         placeholder=""
         id="playlist-name"
+        value={myPlaylistName}
+        onChange={handleChange}
       />
       {myPlaylist.map((item) => (
         <div className="card" key={item.id}>
