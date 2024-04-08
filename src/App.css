@@ -18,7 +18,8 @@
   margin: 0 auto;
 }
 
-.results-container, .list-container {
+.results-container,
+.list-container {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
