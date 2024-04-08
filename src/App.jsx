@@ -13,10 +13,13 @@ function App() {
 
   const handleClick = (e, id) => {
     e.preventDefault();
-    setPlaylist((prev) => {
-      const trackToAdd = tracks.find((track) => track.id === id);
-      return [...prev, trackToAdd];
-    });
+    const isTrackInPlaylist = playlist.some((track) => track.id === id);
+    if (!isTrackInPlaylist) {
+      setPlaylist((prev) => {
+        const trackToAdd = tracks.find((track) => track.id === id);
+        return [...prev, trackToAdd];
+      });
+    }
   };
 
   const handleSearch = async (query) => {
