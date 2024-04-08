@@ -20,7 +20,6 @@ const Playlist = ({
 
   // const handleSubmitPlaylist = (e) => {
   //   e.preventDefault();
-  //   // console.log(myPlaylist);
   //   const newPlaylist = {
   //     id: new Date().toISOString(),
   //     name: myPlaylistName,
