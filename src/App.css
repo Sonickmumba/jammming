@@ -14,32 +14,34 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  width: 90%;
+  width: 60%;
+  margin: 0 auto;
 }
 
-.results-container {
+.results-container, .list-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   box-sizing: border-box;
+  width: 350px;
   height: 85vh;
   background-color: aqua;
   overflow: scroll;
 }
 
-.list-container {
+/* .list-container {
   display: flex;
   flex-direction: column;
-  width: 45%;
   height: 85vh;
   background-color: aqua;
   overflow: scroll;
   box-sizing: border-box;
-}
+} */
 
 .results {
-  width: 300px;
+  width: 350px;
   text-align: left;
+  padding: 8px;
+  font-size: 1.8rem;
 }
 
 .card {
@@ -89,6 +91,15 @@
   height: 30px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.div-button {
+  width: 350px;
+}
+
+.div-button button {
+  width: 50%;
+  margin: 0 auto;
 }
 
 /* search bar */

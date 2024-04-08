@@ -14,7 +14,9 @@ const Playlist = ({ playlist }) => {
         </div>
       ))}
 
-      <button>Save to spotify</button>
+      <div className="div-button">
+        <button>Save to spotify</button>
+      </div>
     </div>
   );
 };

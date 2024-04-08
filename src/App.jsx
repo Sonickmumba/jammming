@@ -53,13 +53,12 @@ function App() {
       <SearchBar handleSearch={handleSearch} />
       {/* <div> */}
       <div className="track-play-list-container">
-        {loading ? (
+        {/* {loading ? (
           <p>Loading...</p>
         ) : error ? (
           <p>Error: {error}</p>
-        ) : (
-          <TrackList tracks={tracks} handleClick={handleClick} />
-        )}
+        )  */}
+        <TrackList tracks={tracks} handleClick={handleClick} />
         <Playlist playlist={playlist} />
       </div>
       {/* </div> */}
