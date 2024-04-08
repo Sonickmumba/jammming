@@ -3,7 +3,7 @@ import SearchBar from "./components/searchBar/SearchBar";
 import Playlist from "./components/playlist/Playlist";
 import options from "./components/util/options";
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [tracks, setTracks] = useState([]);
@@ -56,6 +56,30 @@ function App() {
     setPlaylist((prev) => prev.filter((track) => track.id !== id));
   };
 
+  const [myPlaylist, setMyPlaylist] = useState([]);
+  const [savePlaylist, setSavePlaylist] = useState([]);
+  const [myPlaylistName, setMyPlaylistName] = useState("");
+
+  const handleSubmitPlaylist = (e) => {
+    e.preventDefault();
+    const newPlaylist = {
+      id: new Date().toISOString(),
+      name: myPlaylistName,
+      playlist: playlist,
+    };
+    setSavePlaylist((prev) => [...prev, newPlaylist]);
+    setPlaylist([]);
+  };
+
+  const handleChange = (e) => {
+    setMyPlaylistName(e.target.value);
+  };
+
+  useEffect(() => {
+    setMyPlaylist(playlist);
+  }, [playlist]);
+
+  console.log(savePlaylist);
   return (
     <div className="app-contrainer">
       <SearchBar handleSearch={handleSearch} />
@@ -69,7 +93,14 @@ function App() {
           <p>sonick</p>
         )}
         <TrackList tracks={tracks} handleClick={handleClick} />
-        <Playlist playlist={playlist} handleRemoveTrack={handleRemoveTrack} />
+        <Playlist
+          playlist={playlist}
+          handleRemoveTrack={handleRemoveTrack}
+          myPlaylist={myPlaylist}
+          handleSubmitPlaylist={handleSubmitPlaylist}
+          handleChange={handleChange}
+          myPlaylistName={myPlaylistName}
+        />
       </div>
       {/* </div> */}
     </div>

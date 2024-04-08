@@ -1,31 +1,39 @@
 /* eslint-disable react/prop-types */
 
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
-const Playlist = ({ playlist, handleRemoveTrack }) => {
-  const [myPlaylist, setMyPlaylist] = useState([]);
-  const [myPlaylistName, setMyPlaylistName] = useState("");
-  const [savePlaylist, setSavePlaylist] = useState([]);
+const Playlist = ({
+  // playlist,
+  handleRemoveTrack,
+  handleSubmitPlaylist,
+  handleChange,
+  myPlaylist,
+  myPlaylistName,
+}) => {
+  // const [myPlaylist, setMyPlaylist] = useState([]);
+  // const [myPlaylistName, setMyPlaylistName] = useState("");
+  // const [savePlaylist, setSavePlaylist] = useState([]);
 
-  useEffect(() => {
-    setMyPlaylist(playlist);
-  }, [playlist]);
+  // useEffect(() => {
+  //   setMyPlaylist(playlist);
+  // }, [playlist]);
 
-  const handleSubmitPlaylist = (e) => {
-    e.preventDefault();
-    console.log(myPlaylist);
-    const newPlaylist = {
-      id: new Date().toISOString(),
-      name: myPlaylistName,
-      playlist: myPlaylist,
-    };
-    setSavePlaylist((prev) => [...prev, newPlaylist]);
-  };
+  // const handleSubmitPlaylist = (e) => {
+  //   e.preventDefault();
+  //   // console.log(myPlaylist);
+  //   const newPlaylist = {
+  //     id: new Date().toISOString(),
+  //     name: myPlaylistName,
+  //     playlist: myPlaylist,
+  //   };
+  //   setSavePlaylist((prev) => [...prev, newPlaylist]);
+  //   setMyPlaylist([]);
+  // };
 
-  const handleChange = (e) => {
-    setMyPlaylistName(e.target.value);
-  };
-  console.log(savePlaylist);
+  // const handleChange = (e) => {
+  //   setMyPlaylistName(e.target.value);
+  // };
+  // console.log(savePlaylist);
 
   return (
     <form className="list-container" onSubmit={handleSubmitPlaylist}>
