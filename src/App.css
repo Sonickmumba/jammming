@@ -1,1 +1,160 @@
 /* css */
+
+.app-contrainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.track-play-list-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.results-container,
+.list-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 350px;
+  height: 85vh;
+  background-color: aqua;
+  overflow: scroll;
+}
+
+#playlist-name {
+  height: 30px;
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 1em;
+  background-color: aqua;
+}
+
+.list-container .track-name {
+  height: 30px;
+  border: none;
+  font-size: 1em;
+}
+
+.track-art-alb {
+  margin-right: 5px;
+  border: none;
+  font-size: 10px;
+}
+
+.track-art-alb::after {
+  content: "|";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.list-container input:focus {
+  outline: none;
+}
+
+.results {
+  width: 335px;
+  text-align: left;
+  padding: 8px;
+  font-size: 1.8rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.artist-album {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.artist-album span {
+  margin-right: 5px;
+}
+
+.artist-album span::after {
+  content: "|";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.add-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.div-button {
+  display: flex;
+  width: 350px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.div-button button {
+  width: 40%;
+  margin: 0 auto;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* search bar */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  font-size: 16px;
+}
+
+.search-button {
+  padding: 8px 16px;
+  margin-left: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
