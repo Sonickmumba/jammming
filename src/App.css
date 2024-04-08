@@ -28,17 +28,8 @@
   overflow: scroll;
 }
 
-/* .list-container {
-  display: flex;
-  flex-direction: column;
-  height: 85vh;
-  background-color: aqua;
-  overflow: scroll;
-  box-sizing: border-box;
-} */
-
 .results {
-  width: 350px;
+  width: 335px;
   text-align: left;
   padding: 8px;
   font-size: 1.8rem;
