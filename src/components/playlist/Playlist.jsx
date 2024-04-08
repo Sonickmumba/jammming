@@ -1,18 +1,41 @@
 /* eslint-disable react/prop-types */
 
-const Playlist = ({ playlist }) => {
+import { useState, useEffect } from "react";
+
+const Playlist = ({ playlist, handleRemoveTrack }) => {
+  const [myPlaylist, setMyPlaylist] = useState([]);
+
+  useEffect(() => {
+    setMyPlaylist(playlist);
+  }, [playlist]);
+
+  const handleSubmitPlaylist = (e) => {
+    e.preventDefault();
+    console.log(myPlaylist);
+  };
+
   return (
-    <form className="list-container">
-      <input type="text" placeholder="" id="playlist-name" />
-      {playlist.map((item) => (
+    <form className="list-container" onSubmit={handleSubmitPlaylist}>
+      <input
+        name="playlistName"
+        type="text"
+        placeholder=""
+        id="playlist-name"
+      />
+      {myPlaylist.map((item) => (
         <div className="card" key={item.id}>
-          <input value={item.name} className="track-name" />
+          <div className="track-name">{item.name}</div>
           <div className="artist-album">
             {/* <span>{item.artist}</span> */}
-            <input type="text" value={item.artist} className="track-art-alb" />
-            <input type="text" value={item.album} className="track-art-alb" />
+            <span className="track-art-alb">{item.artist}</span>
+            <span className="track-art-alb">{item.album}</span>
           </div>
-          <button className="add-button">-</button>
+          <button
+            className="add-button"
+            onClick={(e) => handleRemoveTrack(e, item.id)}
+          >
+            -
+          </button>
         </div>
       ))}
 

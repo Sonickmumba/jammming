@@ -51,6 +51,11 @@ function App() {
     }
   };
 
+  const handleRemoveTrack = (e, id) => {
+    e.preventDefault();
+    setPlaylist((prev) => prev.filter((track) => track.id !== id));
+  };
+
   return (
     <div className="app-contrainer">
       <SearchBar handleSearch={handleSearch} />
@@ -64,7 +69,7 @@ function App() {
           <p>sonick</p>
         )}
         <TrackList tracks={tracks} handleClick={handleClick} />
-        <Playlist playlist={playlist} />
+        <Playlist playlist={playlist} handleRemoveTrack={handleRemoveTrack} />
       </div>
       {/* </div> */}
     </div>
