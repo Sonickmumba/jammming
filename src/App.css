@@ -85,12 +85,19 @@
 }
 
 .div-button {
+  display: flex;
   width: 350px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .div-button button {
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
 }
 
 /* search bar */
