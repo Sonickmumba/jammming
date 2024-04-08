@@ -2,22 +2,24 @@
 
 const Playlist = ({ playlist }) => {
   return (
-    <div className="list-container">
+    <form className="list-container">
+      <input type="text" placeholder="" id="playlist-name" />
       {playlist.map((item) => (
         <div className="card" key={item.id}>
-          <h3>{item.name}</h3>
+          <input value={item.name} className="track-name" />
           <div className="artist-album">
-            <span>sonick</span>
-            <span>Mumba</span>
+            {/* <span>{item.artist}</span> */}
+            <input type="text" value={item.artist} className="track-art-alb" />
+            <input type="text" value={item.album} className="track-art-alb" />
           </div>
           <button className="add-button">-</button>
         </div>
       ))}
 
       <div className="div-button">
-        <button>Save to spotify</button>
+        <button type="submit">Save to spotify</button>
       </div>
-    </div>
+    </form>
   );
 };
 

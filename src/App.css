@@ -28,6 +28,41 @@
   overflow: scroll;
 }
 
+#playlist-name {
+  height: 30px;
+  padding: 8px;
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 1em;
+  background-color: aqua;
+}
+
+.list-container .track-name {
+  height: 30px;
+  /* padding: 8px; */
+  border: none;
+  /* border-bottom: 2px solid #000; */
+  font-size: 1em;
+  /* background-color: aqua; */
+}
+
+.track-art-alb {
+  margin-right: 5px;
+  border: none;
+  font-size: 10px;
+}
+
+.track-art-alb::after {
+  content: "|";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.list-container input:focus {
+  outline: none; /* Remove the focus outline */
+  /* border-bottom: none; Remove the border bottom when input is focused */
+}
+
 .results {
   width: 335px;
   text-align: left;
