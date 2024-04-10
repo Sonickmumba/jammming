@@ -102,27 +102,10 @@ h1 {
 }
 
 .card {
-  /* border: 1px solid #ccc; */
-  /* border-radius: 5px; */
-  /* padding: 10px;
-  margin: 10px;
-  width: 300px;
-  background-color: #f9f9f9;
-  position: relative; */
-
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(256, 256, 256, 0.8);
 }
-
-/* .card h3 {
-  margin-top: 0;
-} */
-
-/* .card p {
-  margin-bottom: 5px;
-  line-height: 1.5;
-} */
 
 .artist-album {
   /* display: flex;
