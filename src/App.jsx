@@ -136,7 +136,6 @@ function App() {
       <Header />
       <div className="app-contrainer">
         <SearchBar handleSearch={handleSearch} />
-        {/* <div> */}
         <div className="track-play-list-container">
           {loading ? (
             <p>Loading...</p>
@@ -155,7 +154,6 @@ function App() {
             myPlaylistName={myPlaylistName}
           />
         </div>
-        {/* </div> */}
       </div>
     </>
   );
