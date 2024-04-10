@@ -38,13 +38,6 @@ h1 {
 }
 
 .results-container {
-  /* display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 350px;
-  height: 85vh;
-  background-color: aqua;
-  overflow: scroll; */
   width: 50%;
   height: 950px;
   overflow-y: scroll;
