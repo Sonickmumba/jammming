@@ -125,25 +125,7 @@ h1 {
   color: rgba(256, 256, 256, 0.8);
 }
 
-/* .artist-album span::after {
-  content: "|";
-  margin-left: 5px;
-  margin-right: 5px;
-} */
-
 .add-button {
-  /* position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  cursor: pointer; */
-
   cursor: pointer;
   padding: .5rem;
   font-size: 1.05rem;
@@ -158,13 +140,6 @@ h1 {
 }
 
 .div-button button {
-  /* width: 40%;
-  margin: 0 auto;
-  padding: 8px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem; */
-
   cursor: pointer;
   width: 10rem;
   padding: .77rem 0;
