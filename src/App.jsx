@@ -5,6 +5,7 @@ import Playlist from "./components/playlist/Playlist";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Spotify from "./components/util/spotify";
+import Header from "./components/header/Header";
 
 function App() {
   const [tracks, setTracks] = useState([]);
@@ -131,29 +132,32 @@ function App() {
 
   console.log(savePlaylist);
   return (
-    <div className="app-contrainer">
-      <SearchBar handleSearch={handleSearch} />
-      {/* <div> */}
-      <div className="track-play-list-container">
-        {loading ? (
-          <p>Loading...</p>
-        ) : error ? (
-          <p>Error: {error}</p>
-        ) : (
-          <p>sonick</p>
-        )}
-        <TrackList tracks={tracks} handleClick={handleClick} />
-        <Playlist
-          playlist={playlist}
-          handleRemoveTrack={handleRemoveTrack}
-          myPlaylist={myPlaylist}
-          handleSubmitPlaylist={handleSubmitPlaylist}
-          handleChange={handleChange}
-          myPlaylistName={myPlaylistName}
-        />
+    <>
+      <Header />
+      <div className="app-contrainer">
+        <SearchBar handleSearch={handleSearch} />
+        {/* <div> */}
+        <div className="track-play-list-container">
+          {loading ? (
+            <p>Loading...</p>
+          ) : error ? (
+            <p>Error: {error}</p>
+          ) : (
+            <p>sonick</p>
+          )}
+          <TrackList tracks={tracks} handleClick={handleClick} />
+          <Playlist
+            playlist={playlist}
+            handleRemoveTrack={handleRemoveTrack}
+            myPlaylist={myPlaylist}
+            handleSubmitPlaylist={handleSubmitPlaylist}
+            handleChange={handleChange}
+            myPlaylistName={myPlaylistName}
+          />
+        </div>
+        {/* </div> */}
       </div>
-      {/* </div> */}
-    </div>
+    </>
   );
 }
 
