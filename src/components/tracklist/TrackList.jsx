@@ -7,10 +7,11 @@ const TrackList = ({ tracks, handleClick }) => {
       <div className="Tracklist-co">
         {tracks.map((track) => (
           <div className="card" key={track.id}>
-            <h3>{track.name}</h3>
+            
             <div className="artist-album">
-              <span>{track.artist}</span>
-              <span>{track.album}</span>
+              <h3>{track.name}</h3>
+              <p>{track.artist} | {track.album}</p>
+              
             </div>
             <button
               className="add-button"

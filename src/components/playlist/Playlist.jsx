@@ -44,22 +44,23 @@ const Playlist = ({
         value={myPlaylistName}
         onChange={handleChange}
       />
-      {myPlaylist.map((item) => (
-        <div className="card" key={item.id}>
-          <div className="track-name">{item.name}</div>
-          <div className="artist-album">
-            {/* <span>{item.artist}</span> */}
-            <span className="track-art-alb">{item.artist}</span>
-            <span className="track-art-alb">{item.album}</span>
+      <div className="Playlist-track-container">
+        {myPlaylist.map((item) => (
+          <div className="card" key={item.id}>
+            <div className="artist-album">
+              <h3>{item.name}</h3>
+              <p>{item.artist} | {item.album}</p>
+              
+            </div>
+            <button
+              className="add-button"
+              onClick={(e) => handleRemoveTrack(e, item.id)}
+            >
+              -
+            </button>
           </div>
-          <button
-            className="add-button"
-            onClick={(e) => handleRemoveTrack(e, item.id)}
-          >
-            -
-          </button>
-        </div>
-      ))}
+        ))}
+      </div>
 
       <div className="div-button">
         <button type="submit">Save to spotify</button>

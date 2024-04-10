@@ -35,8 +35,7 @@ body {
   /* margin: 0 auto; */
 }
 
-.results-container,
-.list-container {
+.results-container {
   /* display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -52,13 +51,38 @@ body {
   box-shadow: 0 4px 2px #000;
 }
 
+.list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  width: 37%;
+  max-height: 950px;
+  padding: 2.27rem 1.16rem;
+  background-color: rgba(1, 12, 63, 0.7);
+  box-shadow: 0 4px 2px 2px #000000;
+}
+
 #playlist-name {
-  height: 30px;
+  /* height: 30px;
   padding: 8px;
   border: none;
   border-bottom: 2px solid #000;
   font-size: 1em;
-  background-color: aqua;
+  background-color: aqua; */
+
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #6f6f6f;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
+  color: #fff;
+}
+
+.Playlist-track-container {
+  width: 100%;
 }
 
 .list-container .track-name {
@@ -98,41 +122,56 @@ body {
 .card {
   /* border: 1px solid #ccc; */
   /* border-radius: 5px; */
-  padding: 10px;
+  /* padding: 10px;
   margin: 10px;
   width: 300px;
   background-color: #f9f9f9;
-  position: relative;
+  position: relative; */
+
+  display: flex;
+  align-items: center;
   border-bottom: 1px solid rgba(256, 256, 256, 0.8);
 }
 
-.card h3 {
+/* .card h3 {
   margin-top: 0;
-}
+} */
 
-.card p {
+/* .card p {
   margin-bottom: 5px;
   line-height: 1.5;
-}
+} */
 
 .artist-album {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 5px; */
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 72px;
 }
 
-.artist-album span {
-  margin-right: 5px;
+.artist-album h3 {
+  margin-bottom: 0.2rem;
 }
 
-.artist-album span::after {
+.artist-album p {
+  font-size: .83rem;
+  font-weight: 300;
+  color: rgba(256, 256, 256, 0.8);
+}
+
+/* .artist-album span::after {
   content: "|";
   margin-left: 5px;
   margin-right: 5px;
-}
+} */
 
 .add-button {
-  position: absolute;
+  /* position: absolute;
   top: 10px;
   right: 10px;
   background-color: #007bff;
@@ -142,7 +181,12 @@ body {
   width: 30px;
   height: 30px;
   font-size: 20px;
+  cursor: pointer; */
+
   cursor: pointer;
+  padding: .5rem;
+  font-size: 1.05rem;
+  transition: color .25s;
 }
 
 .div-button {
@@ -153,12 +197,23 @@ body {
 }
 
 .div-button button {
-  width: 40%;
+  /* width: 40%;
   margin: 0 auto;
   padding: 8px;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1rem; */
+
+  cursor: pointer;
+  width: 10rem;
+  padding: .77rem 0;
+  border-radius: 54px;
+  margin-top: 1.27rem;
+  background-color: #6c41ec;
+  text-align: center;
+  font-size: .83rem;
+  transition: background-color .25s;
+  color: #fff;
 }
 
 /* search bar */
