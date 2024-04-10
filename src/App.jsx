@@ -122,9 +122,15 @@ function App() {
     setPlaylist([]);
   };
 
-  const handleChange = (e) => {
-    setMyPlaylistName(e.target.value);
-  };
+  // const handleChange = (e) => {
+  //   setMyPlaylistName(e.target.value);
+  // };
+
+  // add now
+  const handleUpdatePlaylistName = (val) => {
+    setMyPlaylistName(val)
+  }
+  // end add now
 
   useEffect(() => {
     setMyPlaylist(playlist);
@@ -150,8 +156,9 @@ function App() {
             handleRemoveTrack={handleRemoveTrack}
             myPlaylist={myPlaylist}
             handleSubmitPlaylist={handleSubmitPlaylist}
-            handleChange={handleChange}
+            // handleChange={handleChange}
             myPlaylistName={myPlaylistName}
+            handleUpdatePlaylistName={handleUpdatePlaylistName}
           />
         </div>
       </div>

@@ -1,15 +1,19 @@
 /* eslint-disable react/prop-types */
 
+import { useState } from "react";
+
 // import { useState, useEffect } from "react";
 
 const Playlist = ({
   // playlist,
   handleRemoveTrack,
   handleSubmitPlaylist,
-  handleChange,
+  // handleChange,
   myPlaylist,
   myPlaylistName,
+  handleUpdatePlaylistName,
 }) => {
+  const [isEditing, setIsEditing] = useState(true);
   // const [myPlaylist, setMyPlaylist] = useState([]);
   // const [myPlaylistName, setMyPlaylistName] = useState("");
   // const [savePlaylist, setSavePlaylist] = useState([]);
@@ -34,16 +38,38 @@ const Playlist = ({
   // };
   // console.log(savePlaylist);
 
+  const handleChange = (e) => {
+    handleUpdatePlaylistName(e.target.value);
+  };
+
+  const toggleEditing = () => {
+    setIsEditing(!isEditing);
+  }
+
   return (
     <form className="list-container" onSubmit={handleSubmitPlaylist}>
-      <input
+      {isEditing ? (
+        <input
         name="playlistName"
         type="text"
         placeholder=""
         id="playlist-name"
         value={myPlaylistName}
         onChange={handleChange}
+        autoFocus
+        onBlur={toggleEditing}
       />
+      ) : (
+        <h2 id="playlist-name" onClick={toggleEditing}>{myPlaylistName}</h2>
+      )}
+      {/* // <input
+      //   name="playlistName"
+      //   type="text"
+      //   placeholder=""
+      //   id="playlist-name"
+      //   value={myPlaylistName}
+      //   onChange={handleChange}
+      // /> */}
       <div className="Playlist-track-container">
         {myPlaylist.map((item) => (
           <div className="card" key={item.id}>
