@@ -12,6 +12,10 @@ h1 {
   color: #fff;
 }
 
+.color-ms {
+  color: #6c41ec;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -2,7 +2,7 @@
 
 const Header = () => {
   return (
-    <h1>Jammming</h1>
+    <h1>Ja<span className="color-ms">mmm</span>ing</h1>
   )
 }
 
