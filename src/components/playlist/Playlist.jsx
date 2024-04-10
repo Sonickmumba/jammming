@@ -1,20 +1,66 @@
 /* eslint-disable react/prop-types */
 
-const Playlist = ({ playlist }) => {
+// import { useState, useEffect } from "react";
+
+const Playlist = ({
+  // playlist,
+  handleRemoveTrack,
+  handleSubmitPlaylist,
+  handleChange,
+  myPlaylist,
+  myPlaylistName,
+}) => {
+  // const [myPlaylist, setMyPlaylist] = useState([]);
+  // const [myPlaylistName, setMyPlaylistName] = useState("");
+  // const [savePlaylist, setSavePlaylist] = useState([]);
+
+  // useEffect(() => {
+  //   setMyPlaylist(playlist);
+  // }, [playlist]);
+
+  // const handleSubmitPlaylist = (e) => {
+  //   e.preventDefault();
+  //   const newPlaylist = {
+  //     id: new Date().toISOString(),
+  //     name: myPlaylistName,
+  //     playlist: myPlaylist,
+  //   };
+  //   setSavePlaylist((prev) => [...prev, newPlaylist]);
+  //   setMyPlaylist([]);
+  // };
+
+  // const handleChange = (e) => {
+  //   setMyPlaylistName(e.target.value);
+  // };
+  // console.log(savePlaylist);
+
   return (
-    <form className="list-container">
-      <input type="text" placeholder="" id="playlist-name" />
-      {playlist.map((item) => (
-        <div className="card" key={item.id}>
-          <input value={item.name} className="track-name" />
-          <div className="artist-album">
-            {/* <span>{item.artist}</span> */}
-            <input type="text" value={item.artist} className="track-art-alb" />
-            <input type="text" value={item.album} className="track-art-alb" />
+    <form className="list-container" onSubmit={handleSubmitPlaylist}>
+      <input
+        name="playlistName"
+        type="text"
+        placeholder=""
+        id="playlist-name"
+        value={myPlaylistName}
+        onChange={handleChange}
+      />
+      <div className="Playlist-track-container">
+        {myPlaylist.map((item) => (
+          <div className="card" key={item.id}>
+            <div className="artist-album">
+              <h3>{item.name}</h3>
+              <p>{item.artist} | {item.album}</p>
+              
+            </div>
+            <button
+              className="add-button"
+              onClick={(e) => handleRemoveTrack(e, item.id)}
+            >
+              -
+            </button>
           </div>
-          <button className="add-button">-</button>
-        </div>
-      ))}
+        ))}
+      </div>
 
       <div className="div-button">
         <button type="submit">Save to spotify</button>
