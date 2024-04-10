@@ -20,7 +20,7 @@ const SearchBar = ({ handleSearch }) => {
       <input
         type="text"
         className="search-input"
-        placeholder="Search..."
+        placeholder="Search track name"
         value={query}
         onChange={handleChange}
       />
