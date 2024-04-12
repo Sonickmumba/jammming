@@ -15,7 +15,7 @@ function App() {
 
   const [accessToken, setAccessToken] = useState(null);
 
-  const handleClick = (e, id) => {
+  const handleAddTrackToPlaylist = (e, id) => {
     e.preventDefault();
     const isTrackInPlaylist = playlist.some((track) => track.id === id);
     if (!isTrackInPlaylist) {
@@ -100,7 +100,10 @@ function App() {
           ) : (
             <p>sonick</p>
           )}
-          <TrackList tracks={tracks} handleClick={handleClick} />
+          <TrackList
+            tracks={tracks}
+            handleAddTrackToPlaylist={handleAddTrackToPlaylist}
+          />
           <Playlist
             playlist={playlist}
             handleRemoveTrack={handleRemoveTrack}

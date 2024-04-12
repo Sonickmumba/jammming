@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const TrackList = ({ tracks, handleClick }) => {
+const TrackList = ({ tracks, handleAddTrackToPlaylist }) => {
   return (
     <div className="results-container">
       <h2 className="results">Results</h2>
@@ -16,7 +16,7 @@ const TrackList = ({ tracks, handleClick }) => {
             <a
               className="add-button"
               id={track.id}
-              onClick={(e) => handleClick(e, track.id)}
+              onClick={(e) => handleAddTrackToPlaylist(e, track.id)}
             >
               +
             </a>
@@ -36,7 +36,7 @@ TrackList.propTypes = {
       album: PropTypes.string.isRequired,
     })
   ).isRequired,
-  handleClick: PropTypes.func.isRequired,
+  handleAddTrackToPlaylist: PropTypes.func.isRequired,
 };
 
 export default TrackList;
