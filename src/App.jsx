@@ -60,9 +60,11 @@ function App() {
     }
   };
 
-  const handleRemoveTrack = (e, id) => {
+  const handleRemoveTrack = (e, trackToRemove) => {
     e.preventDefault();
-    setPlaylist((prev) => prev.filter((track) => track.id !== id));
+    setPlaylist((prev) =>
+      prev.filter((track) => track.id !== trackToRemove.id)
+    );
   };
 
   const [myPlaylist, setMyPlaylist] = useState([]);

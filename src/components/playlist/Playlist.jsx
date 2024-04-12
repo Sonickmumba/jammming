@@ -28,7 +28,7 @@ const Playlist = ({
             </div>
             <a
               className="add-button"
-              onClick={(e) => handleRemoveTrack(e, item.id)}
+              onClick={(e) => handleRemoveTrack(e, item)}
             >
               -
             </a>
