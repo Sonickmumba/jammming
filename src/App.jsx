@@ -66,7 +66,7 @@ function App() {
   const [savePlaylist, setSavePlaylist] = useState([]);
   const [myPlaylistName, setMyPlaylistName] = useState("");
 
-  const handleSubmitPlaylist = (e) => {
+  const handleSavePlaylist = (e) => {
     e.preventDefault();
     const newPlaylist = {
       id: new Date().toISOString(),
@@ -105,7 +105,7 @@ function App() {
             playlist={playlist}
             handleRemoveTrack={handleRemoveTrack}
             myPlaylist={myPlaylist}
-            handleSubmitPlaylist={handleSubmitPlaylist}
+            handleSavePlaylist={handleSavePlaylist}
             handleChange={handleChange}
             myPlaylistName={myPlaylistName}
             // handleUpdatePlaylistName={handleUpdatePlaylistName}

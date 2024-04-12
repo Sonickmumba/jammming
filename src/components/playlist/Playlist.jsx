@@ -2,13 +2,13 @@
 
 const Playlist = ({
   handleRemoveTrack,
-  handleSubmitPlaylist,
+  handleSavePlaylist,
   handleChange,
   myPlaylist,
   myPlaylistName,
 }) => {
   return (
-    <form className="list-container" onSubmit={handleSubmitPlaylist}>
+    <form className="list-container" onSubmit={handleSavePlaylist}>
       <input
         name="playlistName"
         type="text"
