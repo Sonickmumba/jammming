@@ -17,7 +17,7 @@ function App() {
 
   const handleAddTrackToPlaylist = (e, trackToAdd) => {
     e.preventDefault();
-    // const isTrackInPlaylist = playlist.some((track) => track.id === id);
+
     const isTrackInPlaylist = playlist.some(
       (track) => track.id === trackToAdd.id
     );
