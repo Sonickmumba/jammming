@@ -39,7 +39,6 @@ function App() {
     };
     fetchAccessToken();
   }, []);
-  console.log(accessToken);
 
   const handleSearch = (query) => {
     if (query !== "") {
@@ -58,7 +57,6 @@ function App() {
     }
   };
 
-  console.log(tracks);
   const handleRemoveTrack = (e, id) => {
     e.preventDefault();
     setPlaylist((prev) => prev.filter((track) => track.id !== id));
@@ -88,7 +86,7 @@ function App() {
   }, [playlist]);
 
   console.log(savePlaylist);
-  console.log(myPlaylist);
+
   return (
     <>
       <Header />
