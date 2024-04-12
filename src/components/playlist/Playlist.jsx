@@ -1,9 +1,6 @@
 /* eslint-disable react/prop-types */
 
-// import { useState, useEffect } from "react";
-
 const Playlist = ({
-  // playlist,
   handleRemoveTrack,
   handleSubmitPlaylist,
   handleChange,
