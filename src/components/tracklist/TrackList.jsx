@@ -7,19 +7,19 @@ const TrackList = ({ tracks, handleClick }) => {
       <div className="Tracklist-co">
         {tracks.map((track) => (
           <div className="card" key={track.id}>
-            
             <div className="artist-album">
               <h3>{track.name}</h3>
-              <p>{track.artist} | {track.album}</p>
-              
+              <p>
+                {track.artist} | {track.album}
+              </p>
             </div>
-            <button
+            <a
               className="add-button"
               id={track.id}
               onClick={(e) => handleClick(e, track.id)}
             >
               +
-            </button>
+            </a>
           </div>
         ))}
       </div>

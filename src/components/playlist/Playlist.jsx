@@ -29,12 +29,12 @@ const Playlist = ({
                 {item.artist} | {item.album}
               </p>
             </div>
-            <button
+            <a
               className="add-button"
               onClick={(e) => handleRemoveTrack(e, item.id)}
             >
               -
-            </button>
+            </a>
           </div>
         ))}
       </div>

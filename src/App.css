@@ -129,7 +129,8 @@ h1 {
   color: rgba(256, 256, 256, 0.8);
 }
 
-.add-button {
+.add-button,
+.remove-button {
   cursor: pointer;
   padding: 0.5rem;
   font-size: 1.05rem;
