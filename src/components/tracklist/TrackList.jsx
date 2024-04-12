@@ -16,7 +16,7 @@ const TrackList = ({ tracks, handleAddTrackToPlaylist }) => {
             <a
               className="add-button"
               id={track.id}
-              onClick={(e) => handleAddTrackToPlaylist(e, track.id)}
+              onClick={(e) => handleAddTrackToPlaylist(e, track)}
             >
               +
             </a>

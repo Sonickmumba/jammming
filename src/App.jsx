@@ -15,13 +15,16 @@ function App() {
 
   const [accessToken, setAccessToken] = useState(null);
 
-  const handleAddTrackToPlaylist = (e, id) => {
+  const handleAddTrackToPlaylist = (e, trackToAdd) => {
     e.preventDefault();
-    const isTrackInPlaylist = playlist.some((track) => track.id === id);
+    // const isTrackInPlaylist = playlist.some((track) => track.id === id);
+    const isTrackInPlaylist = playlist.some(
+      (track) => track.id === trackToAdd.id
+    );
     if (!isTrackInPlaylist) {
       setPlaylist((prev) => {
-        const trackToAdd = tracks.find((track) => track.id === id);
-        return [...prev, trackToAdd];
+        const toAdd = tracks.find((track) => track.id === trackToAdd.id);
+        return [...prev, toAdd];
       });
     }
   };
