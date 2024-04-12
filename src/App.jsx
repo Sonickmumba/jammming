@@ -83,7 +83,6 @@ function App() {
     setMyPlaylistName(e.target.value);
   };
 
-
   useEffect(() => {
     setMyPlaylist(playlist);
   }, [playlist]);
