@@ -10,30 +10,6 @@ const Playlist = ({
   myPlaylist,
   myPlaylistName,
 }) => {
-  // const [myPlaylist, setMyPlaylist] = useState([]);
-  // const [myPlaylistName, setMyPlaylistName] = useState("");
-  // const [savePlaylist, setSavePlaylist] = useState([]);
-
-  // useEffect(() => {
-  //   setMyPlaylist(playlist);
-  // }, [playlist]);
-
-  // const handleSubmitPlaylist = (e) => {
-  //   e.preventDefault();
-  //   const newPlaylist = {
-  //     id: new Date().toISOString(),
-  //     name: myPlaylistName,
-  //     playlist: myPlaylist,
-  //   };
-  //   setSavePlaylist((prev) => [...prev, newPlaylist]);
-  //   setMyPlaylist([]);
-  // };
-
-  // const handleChange = (e) => {
-  //   setMyPlaylistName(e.target.value);
-  // };
-  // console.log(savePlaylist);
-
   return (
     <form className="list-container" onSubmit={handleSubmitPlaylist}>
       <input
@@ -49,8 +25,9 @@ const Playlist = ({
           <div className="card" key={item.id}>
             <div className="artist-album">
               <h3>{item.name}</h3>
-              <p>{item.artist} | {item.album}</p>
-              
+              <p>
+                {item.artist} | {item.album}
+              </p>
             </div>
             <button
               className="add-button"
