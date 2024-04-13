@@ -8,7 +8,7 @@ import Header from "./components/header/Header";
 
 function App() {
   const [tracks, setTracks] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [playlist, setPlaylist] = useState([]);
   const [error, setError] = useState(null);
 
@@ -33,17 +33,17 @@ function App() {
 
   const handleSearch = (query) => {
     if (query !== "") {
-      setLoading(true);
-      setError(null);
+      // setLoading(true);
+      // setError(null);
 
       Spotify.search(query, accessToken)
         .then((data) => {
           setTracks(data);
-          setLoading(false);
+          // setLoading(false);
         })
         .catch((error) => {
           setError(error.message);
-          setLoading(false);
+          // setLoading(false);
         });
     }
   };
@@ -74,7 +74,7 @@ function App() {
       } catch (error) {
         setError(error.message);
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
     fetchAccessToken();
@@ -90,13 +90,6 @@ function App() {
       <div className="app-container">
         <SearchBar handleSearch={handleSearch} />
         <div className="track-play-list-container">
-          {loading ? (
-            <p>Loading...</p>
-          ) : error ? (
-            <p>Error: {error}</p>
-          ) : (
-            <p>sonick</p>
-          )}
           <TrackList
             tracks={tracks}
             handleAddTrackToPlaylist={handleAddTrackToPlaylist}
