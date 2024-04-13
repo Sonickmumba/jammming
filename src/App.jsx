@@ -1,4 +1,4 @@
-import TrackList from "./components/tracklist/TrackList";
+import TrackList from "./components/trackList/TrackList";
 import SearchBar from "./components/searchBar/SearchBar";
 import Playlist from "./components/playlist/Playlist";
 import "./App.css";
@@ -72,7 +72,6 @@ function App() {
   const handleSavePlaylist = (e) => {
     e.preventDefault();
     const urls = playlist.map((tr) => tr.uri);
-    // setSavePlaylist(urls);
     Spotify.savePlaylist(myPlaylistName, urls);
     setPlaylist([]);
   };
