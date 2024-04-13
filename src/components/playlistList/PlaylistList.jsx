@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Spotify from "../util/spotify";
+import PlaylistListItem from "./PlaylistListItem";
 
 const PlaylistList = () => {
   const [playlists, setPlaylists] = useState([]);
@@ -28,7 +29,17 @@ const PlaylistList = () => {
     getUserPlaylists();
   }, []);
 
-  return <div>PlaylistList</div>;
+  return (
+    <>
+      {playlists.map((playlist) => (
+        <PlaylistListItem
+          id={playlist.playlistId}
+          name={playlist.playlistName}
+          key={playlist.playlistId}
+        />
+      ))}
+    </>
+  );
 };
 
 export default PlaylistList;
