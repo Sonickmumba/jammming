@@ -72,10 +72,12 @@ const Spotify = {
     const headers = { Authorization: `Bearer ${accessToken}` };
     let userId;
 
+    // get user_id
     const userResponse = await fetch('https://api.spotify.com/v1/me', { headers });
     const jsonResponse = await userResponse.json();
     userId = jsonResponse.id;
 
+    // create playlist name on users account
     const playlistResponse = await fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
       headers,
       method: 'POST',

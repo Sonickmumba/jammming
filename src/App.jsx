@@ -73,13 +73,9 @@ function App() {
 
   const handleSavePlaylist = (e) => {
     e.preventDefault();
-    // const newPlaylist = {
-    //   id: new Date().toISOString(),
-    //   name: myPlaylistName,
-    //   playlist: playlist,
-    // };
     const urls = playlist.map((tr) => tr.uri);
     setSavePlaylist(urls);
+    Spotify.savePlaylist(myPlaylistName, urls);
     // console.log(urls);
     // setSavePlaylist((prev) => [...prev, newPlaylist]);
     setPlaylist([]);
