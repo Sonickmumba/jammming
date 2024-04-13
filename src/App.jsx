@@ -13,7 +13,6 @@ function App() {
   const [error, setError] = useState(null);
 
   const [myPlaylist, setMyPlaylist] = useState([]);
-  const [savePlaylist, setSavePlaylist] = useState([]);
   const [myPlaylistName, setMyPlaylistName] = useState("");
 
   const [accessToken, setAccessToken] = useState(null);
@@ -73,7 +72,7 @@ function App() {
   const handleSavePlaylist = (e) => {
     e.preventDefault();
     const urls = playlist.map((tr) => tr.uri);
-    setSavePlaylist(urls);
+    // setSavePlaylist(urls);
     Spotify.savePlaylist(myPlaylistName, urls);
     setPlaylist([]);
   };
@@ -85,8 +84,6 @@ function App() {
   useEffect(() => {
     setMyPlaylist(playlist);
   }, [playlist]);
-
-  console.log(savePlaylist);
 
   return (
     <>
