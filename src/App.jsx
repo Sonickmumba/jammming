@@ -31,20 +31,6 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    const fetchAccessToken = async () => {
-      try {
-        const token = await Spotify.getAccessToken();
-        setAccessToken(token);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchAccessToken();
-  }, []);
-
   const handleSearch = (query) => {
     if (query !== "") {
       setLoading(true);
@@ -79,6 +65,20 @@ function App() {
   const handleChange = (e) => {
     setMyPlaylistName(e.target.value);
   };
+
+  useEffect(() => {
+    const fetchAccessToken = async () => {
+      try {
+        const token = await Spotify.getAccessToken();
+        setAccessToken(token);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAccessToken();
+  }, []);
 
   useEffect(() => {
     setMyPlaylist(playlist);
