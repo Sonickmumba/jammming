@@ -8,7 +8,6 @@ import Header from "./components/header/Header";
 
 function App() {
   const [tracks, setTracks] = useState([]);
-  // const [loading, setLoading] = useState(false);
   const [playlist, setPlaylist] = useState([]);
   const [error, setError] = useState(null);
 
@@ -33,17 +32,12 @@ function App() {
 
   const handleSearch = (query) => {
     if (query !== "") {
-      // setLoading(true);
-      // setError(null);
-
       Spotify.search(query, accessToken)
         .then((data) => {
           setTracks(data);
-          // setLoading(false);
         })
         .catch((error) => {
           setError(error.message);
-          // setLoading(false);
         });
     }
   };
@@ -73,9 +67,10 @@ function App() {
         setAccessToken(token);
       } catch (error) {
         setError(error.message);
-      } finally {
-        // setLoading(false);
       }
+      // finally {
+      //   setLoading(false);
+      // }
     };
     fetchAccessToken();
   }, []);
