@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const PlaylistListItem = ({ id, name }) => {
   return (
-    <div className="card" key={id}>
-      <div className="artist-album">
+    <div className="card" id="local-playlist-card" key={id}>
+      <div className="artist-album" id="local-playlist-name">
         <p>{name}</p>
       </div>
     </div>
