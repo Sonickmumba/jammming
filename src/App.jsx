@@ -91,7 +91,7 @@ function App() {
   return (
     <>
       <Header />
-      <div className="app-contrainer">
+      <div className="app-container">
         <SearchBar handleSearch={handleSearch} />
         <div className="track-play-list-container">
           {loading ? (
