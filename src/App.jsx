@@ -112,7 +112,6 @@ function App() {
             handleSavePlaylist={handleSavePlaylist}
             handleChange={handleChange}
             myPlaylistName={myPlaylistName}
-            // handleUpdatePlaylistName={handleUpdatePlaylistName}
           />
         </div>
       </div>
