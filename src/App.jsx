@@ -76,8 +76,6 @@ function App() {
     const urls = playlist.map((tr) => tr.uri);
     setSavePlaylist(urls);
     Spotify.savePlaylist(myPlaylistName, urls);
-    // console.log(urls);
-    // setSavePlaylist((prev) => [...prev, newPlaylist]);
     setPlaylist([]);
   };
 
