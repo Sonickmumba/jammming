@@ -81,6 +81,7 @@ function App() {
 
   const sonick = Spotify.getUserPlaylists();
   console.log(sonick);
+  console.log(error);
 
   return (
     <>
