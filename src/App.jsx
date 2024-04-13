@@ -5,7 +5,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Spotify from "./components/util/spotify";
 import Header from "./components/header/Header";
-import PlaylistList from "./components/playlistList/PlaylistList";
+// import PlaylistList from "./components/playlistList/PlaylistList";
 
 function App() {
   const [tracks, setTracks] = useState([]);
@@ -100,7 +100,6 @@ function App() {
             handleChange={handleChange}
             myPlaylistName={myPlaylistName}
           />
-          <PlaylistList />
         </div>
       </div>
     </>

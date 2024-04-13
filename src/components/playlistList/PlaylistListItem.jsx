@@ -5,7 +5,7 @@ const PlaylistListItem = ({ id, name }) => {
   return (
     <div className="card" key={id}>
       <div className="artist-album">
-        <h3>{name}</h3>
+        <p>{name}</p>
       </div>
     </div>
   );

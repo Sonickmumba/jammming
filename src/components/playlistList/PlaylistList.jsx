@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Spotify from "../util/spotify";
 import PlaylistListItem from "./PlaylistListItem";
+import styles from "./PlaylistList.module.css";
 
 const PlaylistList = () => {
   const [playlists, setPlaylists] = useState([]);
@@ -30,7 +31,8 @@ const PlaylistList = () => {
   }, []);
 
   return (
-    <>
+    <div id={styles["local-playlists-div"]}>
+      <h2>My Local Playlists</h2>
       {playlists.map((playlist) => (
         <PlaylistListItem
           id={playlist.playlistId}
@@ -38,7 +40,7 @@ const PlaylistList = () => {
           key={playlist.playlistId}
         />
       ))}
-    </>
+    </div>
   );
 };
 

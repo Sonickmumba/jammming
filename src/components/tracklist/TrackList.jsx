@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import PlaylistList from "../playlistList/PlaylistList";
 
 const TrackList = ({ tracks, handleAddTrackToPlaylist }) => {
   return (
     <div className="results-container">
       <h2 className="results">Results</h2>
-      <div className="Tracklist-co">
+      <div className="TrackList-co">
         {tracks.map((track) => (
           <div className="card" key={track.id}>
             <div className="artist-album">
@@ -23,6 +24,7 @@ const TrackList = ({ tracks, handleAddTrackToPlaylist }) => {
           </div>
         ))}
       </div>
+      <PlaylistList />
     </div>
   );
 };
