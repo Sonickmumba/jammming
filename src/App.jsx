@@ -1,7 +1,6 @@
 import TrackList from "./components/tracklist/TrackList";
 import SearchBar from "./components/searchBar/SearchBar";
 import Playlist from "./components/playlist/Playlist";
-// import options from "./components/util/options";
 import "./App.css";
 import { useState, useEffect } from "react";
 import Spotify from "./components/util/spotify";
@@ -12,6 +11,10 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [playlist, setPlaylist] = useState([]);
   const [error, setError] = useState(null);
+
+  const [myPlaylist, setMyPlaylist] = useState([]);
+  const [savePlaylist, setSavePlaylist] = useState([]);
+  const [myPlaylistName, setMyPlaylistName] = useState("");
 
   const [accessToken, setAccessToken] = useState(null);
 
@@ -66,10 +69,6 @@ function App() {
       prev.filter((track) => track.id !== trackToRemove.id)
     );
   };
-
-  const [myPlaylist, setMyPlaylist] = useState([]);
-  const [savePlaylist, setSavePlaylist] = useState([]);
-  const [myPlaylistName, setMyPlaylistName] = useState("");
 
   const handleSavePlaylist = (e) => {
     e.preventDefault();
