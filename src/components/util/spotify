@@ -2,8 +2,35 @@ const clientId = '9e17ed2b2ad0412390528ef37a97e281'; // Insert client ID here.
 const redirectUri = 'http://localhost:5173/?/callback'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 
 let accessToken;
+let userId;
 
 const Spotify = {
+
+  async getCurrentUserId() {
+    if (userId) {
+      return userId;
+    }
+  
+    try {
+      const accessToken = await Spotify.getAccessToken();
+      const headers = { Authorization: `Bearer ${accessToken}` };
+  
+      const userResponse = await fetch('https://api.spotify.com/v1/me', { headers });
+  
+      if (!userResponse.ok) {
+        throw new Error('Failed to fetch user data');
+      }
+  
+      const jsonResponse = await userResponse.json();
+      userId = jsonResponse.id;
+      
+      return userId;
+    } catch (error) {
+      console.error('Error fetching user ID:', error);
+      throw error;
+    }
+  },
+
   async getAccessToken() {
     if (accessToken) {
       return accessToken;
@@ -70,12 +97,15 @@ const Spotify = {
 
     const accessToken = await Spotify.getAccessToken();
     const headers = { Authorization: `Bearer ${accessToken}` };
-    let userId;
+    // let userId;
 
-    // get user_id
-    const userResponse = await fetch('https://api.spotify.com/v1/me', { headers });
-    const jsonResponse = await userResponse.json();
-    userId = jsonResponse.id;
+    // get user_id ===========
+    // const userResponse = await fetch('https://api.spotify.com/v1/me', { headers });
+    // const jsonResponse = await userResponse.json();
+    // userId = jsonResponse.id;
+
+    const userId = await Spotify.getCurrentUserId();
+    // end get userid ==========
 
     // create playlist name on users account
     const playlistResponse = await fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
