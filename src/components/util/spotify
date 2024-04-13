@@ -121,6 +121,21 @@ const Spotify = {
       method: 'POST',
       body: JSON.stringify({ uris: trackUris })
     });
+  },
+
+  async getUserPlaylists() {
+    const accessToken = await Spotify.getAccessToken();
+    const headers = { Authorization: `Bearer ${accessToken}` };
+
+    const userId = await Spotify.getCurrentUserId();
+
+    const userPlaylistsResponse = await fetch(`https://api.spotify.com/v1/users/${userId}/playlists`, {
+      headers,
+      method: 'GET',
+    })
+
+    const userPlaylists = await userPlaylistsResponse.json();
+    return userPlaylists;
   }
 };
 

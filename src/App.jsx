@@ -79,6 +79,9 @@ function App() {
     setMyPlaylist(playlist);
   }, [playlist]);
 
+  const sonick = Spotify.getUserPlaylists();
+  console.log(sonick);
+
   return (
     <>
       <Header />
