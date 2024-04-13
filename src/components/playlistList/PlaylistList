@@ -1,6 +1,9 @@
-import React from 'react'
+// import React from 'react'
+
+import { useState } from "react"
 
 const PlaylistList = () => {
+  const [playlists, setPlaylists] = useState([]);
   return (
     <div>PlaylistList</div>
   )
