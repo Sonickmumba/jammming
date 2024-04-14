@@ -106,9 +106,7 @@ h1 {
 
 .TrackList-co {
   width: 100%;
-
-  /* added */
-  height: 300px;
+  max-height: 300px;
   overflow-y: auto;
 }
 
