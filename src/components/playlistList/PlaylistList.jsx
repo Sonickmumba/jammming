@@ -11,7 +11,7 @@ const PlaylistList = () => {
   const getUserPlaylists = async () => {
     try {
       const playlistsFromSpotify = await Spotify.getUserPlaylists();
-      const playlistData = playlistsFromSpotify.items.map((playlist) => {
+      const playlistData = playlistsFromSpotify.map((playlist) => {
         return {
           playlistId: playlist.id,
           playlistName: playlist.name,

@@ -148,7 +148,7 @@ const Spotify = {
         }
       );
       const userPlaylists = await userPlaylistsResponse.json();
-      return userPlaylists;
+      return userPlaylists.items;
     } catch (error) {
       console.error("Error fetching user playlists:", error.message);
     }
