@@ -18,13 +18,10 @@ const PlaylistList = () => {
         };
       });
       setPlaylists(playlistData);
-      console.log(playlistsFromSpotify.items);
     } catch (error) {
       console.log("Error fetching playlist:", error);
     }
   };
-
-  console.log(playlists);
 
   useEffect(() => {
     getUserPlaylists();
