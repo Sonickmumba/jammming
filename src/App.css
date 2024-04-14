@@ -1,15 +1,17 @@
 /* css */
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 h1 {
-  padding: 0.77rem 0;
+  padding: 0.37rem 0;
   background-color: #010c3f;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-size: 1.88rem;
   color: #fff;
+  position: fixed;
+  width: 100%;
 }
 
 .color-ms {
@@ -22,8 +24,7 @@ h1 {
 }
 
 .app-container {
-  height: 100%;
-  padding: 0 17% 10% 17%;
+  height: 100vh;
   background-image: url("https://res.cloudinary.com/djlpfihyu/image/upload/v1713098664/background_photo_desktop_cre4h6.png");
   background-size: cover;
   background-position: center;
@@ -31,18 +32,19 @@ h1 {
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
   color: #fff;
+  padding-top: 10px;
 }
 
 .track-play-list-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .results-container {
   width: 50%;
-  height: 950px;
-  overflow-y: scroll;
+  height: 550px;
   padding: 0.88rem;
   background-color: rgba(1, 12, 63, 0.7);
   box-shadow: 0 4px 2px #000;
@@ -54,7 +56,6 @@ h1 {
   align-items: center;
   overflow-y: scroll;
   width: 37%;
-  max-height: 950px;
   padding: 2.27rem 1.16rem;
   background-color: rgba(1, 12, 63, 0.7);
   box-shadow: 0 4px 2px 2px #000;
@@ -73,6 +74,8 @@ h1 {
 
 .Playlist-track-container {
   width: 100%;
+  max-height: 370px;
+  overflow-y: auto;
 }
 
 .list-container .track-name {
@@ -103,6 +106,10 @@ h1 {
 
 .TrackList-co {
   width: 100%;
+
+  /* added */
+  height: 300px;
+  overflow-y: auto;
 }
 
 .card {
@@ -117,6 +124,11 @@ h1 {
 
 #local-playlist-name {
   height: 50px;
+}
+
+#playlistList-container {
+  max-height: 150px;
+  overflow-y: auto;
 }
 
 .artist-album {
@@ -143,6 +155,7 @@ h1 {
   padding: 0.5rem;
   font-size: 1.05rem;
   transition: color 0.25s;
+  margin-right: 20px;
 }
 
 .div-button {
@@ -170,10 +183,12 @@ h1 {
 
 .search-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-bottom: 6.33rem;
-  padding-top: 6.94rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-top: 1.94rem;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .search-input {
@@ -184,7 +199,6 @@ h1 {
   padding: 0.88rem 0;
   color: #010c3f;
   text-align: center;
-  margin-bottom: 2.22rem;
 }
 
 .search-button {

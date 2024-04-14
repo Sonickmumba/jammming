@@ -33,13 +33,15 @@ const PlaylistList = () => {
   return (
     <div id={styles["local-playlists-div"]}>
       <h2>My Local Playlists</h2>
-      {playlists.map((playlist) => (
-        <PlaylistListItem
-          id={playlist.playlistId}
-          name={playlist.playlistName}
-          key={playlist.playlistId}
-        />
-      ))}
+      <div id="playlistList-container">
+        {playlists.map((playlist) => (
+          <PlaylistListItem
+            id={playlist.playlistId}
+            name={playlist.playlistName}
+            key={playlist.playlistId}
+          />
+        ))}
+      </div>
     </div>
   );
 };
