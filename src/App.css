@@ -24,7 +24,7 @@ h1 {
 .app-container {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-image: url(./assets/background_photo_desktop.png);
+  background-image: url('https://res.cloudinary.com/djlpfihyu/image/upload/v1713098664/background_photo_desktop_cre4h6.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
