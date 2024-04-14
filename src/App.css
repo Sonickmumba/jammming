@@ -7,7 +7,7 @@ h1 {
   padding: 0.77rem 0;
   background-color: #010c3f;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.88rem;
   color: #fff;
 }
@@ -24,11 +24,11 @@ h1 {
 .app-container {
   height: 100%;
   padding: 0 17% 10% 17%;
-  background-image: url('https://res.cloudinary.com/djlpfihyu/image/upload/v1713098664/background_photo_desktop_cre4h6.png');
+  background-image: url("https://res.cloudinary.com/djlpfihyu/image/upload/v1713098664/background_photo_desktop_cre4h6.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 500;
   color: #fff;
 }
@@ -66,7 +66,7 @@ h1 {
   outline: 0;
   background: transparent;
   border-bottom: 1px solid #6f6f6f;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.55rem;
   color: #fff;
 }
