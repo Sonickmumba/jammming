@@ -61,6 +61,18 @@ function App() {
     setMyPlaylistName(e.target.value);
   };
 
+  // for selecting playlist
+  const selectPlaylist = async (id) => {
+    try {
+      const playlistData = await Spotify.getPlaylist(id);
+      console.log(playlistData);
+      setMyPlaylistName(playlistData.name);
+    } catch (error) {
+      console.log("Error failed to load playlist tracks:", error);
+    }
+  };
+  // end for selecting playlist
+
   useEffect(() => {
     const fetchAccessToken = async () => {
       try {
@@ -81,6 +93,7 @@ function App() {
   }, [playlist]);
 
   console.log(error);
+  console.log(myPlaylistName);
 
   return (
     <>
@@ -91,6 +104,8 @@ function App() {
           <TrackList
             tracks={tracks}
             handleAddTrackToPlaylist={handleAddTrackToPlaylist}
+            // add now
+            selectPlaylist={selectPlaylist}
           />
           <Playlist
             playlist={playlist}

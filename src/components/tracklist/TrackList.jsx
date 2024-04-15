@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import PlaylistList from "../playlistList/PlaylistList";
 
-const TrackList = ({ tracks, handleAddTrackToPlaylist }) => {
+const TrackList = ({ tracks, handleAddTrackToPlaylist, selectPlaylist }) => {
   return (
     <div className="results-container">
       <h2 className="results">Results</h2>
@@ -24,7 +24,7 @@ const TrackList = ({ tracks, handleAddTrackToPlaylist }) => {
           </div>
         ))}
       </div>
-      <PlaylistList />
+      <PlaylistList selectPlaylist={selectPlaylist} />
     </div>
   );
 };
@@ -39,6 +39,7 @@ TrackList.propTypes = {
     })
   ).isRequired,
   handleAddTrackToPlaylist: PropTypes.func.isRequired,
+  selectPlaylist: PropTypes.func.isRequired,
 };
 
 export default TrackList;
