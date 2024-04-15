@@ -65,8 +65,16 @@ function App() {
   const selectPlaylist = async (id) => {
     try {
       const playlistData = await Spotify.getPlaylist(id);
-      console.log(playlistData);
       setMyPlaylistName(playlistData.name);
+      const playlistData2 = playlistData.tracks.items.map((playTrack) => {
+        return {
+          id: playTrack.track.id,
+          name: playTrack.track.name,
+          artist: playTrack.track.artists[0]?.name || "Unknown Artist",
+          album: playTrack.track.album.name,
+        }
+      })
+      setMyPlaylist(playlistData2)
     } catch (error) {
       console.log("Error failed to load playlist tracks:", error);
     }
@@ -93,7 +101,6 @@ function App() {
   }, [playlist]);
 
   console.log(error);
-  console.log(myPlaylistName);
 
   return (
     <>
