@@ -153,6 +153,27 @@ const Spotify = {
       console.error("Error fetching user playlists:", error.message);
     }
   },
+
+  async getPlaylist(playlistId) {
+    try {
+      const accessToken = await Spotify.getAccessToken();
+      const headers = { Authorization: `Bearer ${accessToken}` };
+
+      const userId = await Spotify.getCurrentUserId();
+      const playlistTrackResponse = await fetch(
+        `https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}`,
+        {
+          headers,
+          method: "GET",
+        }
+      );
+
+      const playlistTracks = await playlistTrackResponse.json();
+      return playlistTracks;
+    } catch (error) {
+      console.log("Error fetching playlist tracks");
+    }
+  },
 };
 
 export default Spotify;
