@@ -94,34 +94,64 @@ const Spotify = {
     }));
   },
 
-  async savePlaylist(name, trackUris) {
+  async savePlaylist(name, trackUris, id) {
     if (!name || !trackUris.length) {
       return;
     }
 
     const accessToken = await Spotify.getAccessToken();
     const headers = { Authorization: `Bearer ${accessToken}` };
-    // let userId;
-
-    // get user_id ===========
-    // const userResponse = await fetch('https://api.spotify.com/v1/me', { headers });
-    // const jsonResponse = await userResponse.json();
-    // userId = jsonResponse.id;
 
     const userId = await Spotify.getCurrentUserId();
-    // end get userid ==========
 
-    // create playlist name on users account
-    const playlistResponse = await fetch(
-      `https://api.spotify.com/v1/users/${userId}/playlists`,
-      {
-        headers,
-        method: "POST",
-        body: JSON.stringify({ name: name }),
-      }
-    );
-    const playlistJson = await playlistResponse.json();
+
+    // added beow ================
+    if (id) {
+      // Update existing playlist name
+      await fetch(
+        `https://api.spotify.com/v1/users/${userId}/playlists/${id}`,
+        {
+          headers,
+          method: "PUT",
+          body: JSON.stringify({ name: name }),
+        }
+      );
+    } else {
+      // Create new playlist
+      const playlistResponse = await fetch(
+        `https://api.spotify.com/v1/users/${userId}/playlists`,
+        {
+          headers,
+          method: "POST",
+          body: JSON.stringify({ name: name }),
+        }
+      );
+      const playlistJson = await playlistResponse.json();
     const playlistId = playlistJson.id;
+    }
+    // added above ========
+
+
+
+
+
+
+
+
+
+
+
+    
+    // const playlistResponse = await fetch(
+    //   `https://api.spotify.com/v1/users/${userId}/playlists`,
+    //   {
+    //     headers,
+    //     method: "POST",
+    //     body: JSON.stringify({ name: name }),
+    //   }
+    // );
+    // const playlistJson = await playlistResponse.json();
+    // const playlistId = playlistJson.id;
 
     await fetch(
       `https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`,

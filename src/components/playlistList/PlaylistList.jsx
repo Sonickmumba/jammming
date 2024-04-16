@@ -26,7 +26,7 @@ const PlaylistList = ({ selectPlaylist }) => {
 
   useEffect(() => {
     getUserPlaylists();
-  }, []);
+  }, []); 
 
   return (
     <div id={styles["local-playlists-div"]}>

@@ -17,6 +17,8 @@ function App() {
 
   const [accessToken, setAccessToken] = useState(null);
 
+  const [playlistId, setPlaylistId] = useState(null); // added this today
+
   const handleAddTrackToPlaylist = (e, trackToAdd) => {
     e.preventDefault();
 
@@ -53,7 +55,7 @@ function App() {
   const handleSavePlaylist = (e) => {
     e.preventDefault();
     const urls = playlist.map((tr) => tr.uri);
-    Spotify.savePlaylist(myPlaylistName, urls);
+    Spotify.savePlaylist(myPlaylistName, urls, playlistId); //added a third parameter today
     setPlaylist([]);
   };
 
@@ -75,6 +77,7 @@ function App() {
         }
       })
       setMyPlaylist(playlistData2)
+      setPlaylistId(id) // Added this today
     } catch (error) {
       console.log("Error failed to load playlist tracks:", error);
     }
@@ -101,6 +104,7 @@ function App() {
   }, [playlist]);
 
   console.log(error);
+  console.log(playlistId);
 
   return (
     <>
