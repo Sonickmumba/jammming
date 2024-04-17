@@ -94,7 +94,7 @@ const Spotify = {
     }));
   },
 
-  async savePlaylist(name, trackUris, id) {
+  async savePlaylist(name, trackUris, idPlay) {
     if (!name || !trackUris.length) {
       return;
     }
@@ -107,8 +107,9 @@ const Spotify = {
     let playlistId;
 
     // added beow ================
-    if (id.length > 0) {
+    if (idPlay !== undefined && idPlay !== null && idPlay !== '') {
       // Update existing playlist name
+      
       await fetch(
         `https://api.spotify.com/v1/users/${userId}/playlists/${id}`,
         {
@@ -117,7 +118,8 @@ const Spotify = {
           body: JSON.stringify({ name: name }),
         }
       );
-      playlistId = id;
+      playlistId = idPlay;
+      console.log('Name updated')
     } else {
       // Create new playlist
       const playlistResponse = await fetch(
@@ -130,6 +132,7 @@ const Spotify = {
       );
       const playlistJson = await playlistResponse.json();
       playlistId = playlistJson.id;
+      console.log('Created new playlist')
     }
     // added above ========
 
