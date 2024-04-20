@@ -52,10 +52,10 @@ function App() {
     );
   };
 
-  const handleSavePlaylist = (e) => {
+  const handleSavePlaylist = async (e) => {
     e.preventDefault();
     const urls = playlist.map((tr) => tr.uri);
-    Spotify.savePlaylist(myPlaylistName, urls, playlistId); //added a third parameter today
+    await Spotify.savePlaylist(myPlaylistName, urls, playlistId); //added a third parameter today
     setPlaylist([]);
   };
 
@@ -106,6 +106,7 @@ function App() {
 
   console.log(error);
   console.log(playlistId);
+  
 
   return (
     <>
