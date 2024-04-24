@@ -123,7 +123,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:Sonickmumba/eat-and-split.git
+  git clone git@github.com:Sonickmumba/jammming.git
 ```
 
 ### Install
