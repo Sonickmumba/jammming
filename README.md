@@ -27,7 +27,7 @@
 
 # 📖 Jammming <a name="about-project"></a>
 
-**Jammming App** is a web application where friends can split bill after a meal. The app shows how much one owes the other. Also more friends can be added to the eat and split bill app.
+**Jammming App** is a web application where friends can spli. The app shows how much one owes the other. Also more friends can be added to the eat and split bill app.
 It is built using React, Javascript, HTML, CSS3
 
 ![Travel list2 jpeg](https://res.cloudinary.com/djlpfihyu/image/upload/v1704281596/Eat_and_Split-full.jpeg_qyfctl.png)
