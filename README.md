@@ -31,8 +31,6 @@
 It is built using React, Javascript, HTML, CSS3
 
 
-
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
