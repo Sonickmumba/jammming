@@ -30,7 +30,7 @@
 **Jammming App** is a web application is that allows one to search fro songs from spotify and create playlist. The app shows how much one owes the other. Also more friends can be added to the eat and split bill app.
 It is built using React, Javascript, HTML, CSS3
 
-![Travel list2 jpeg](https://res.cloudinary.com/djlpfihyu/image/upload/v170428159
+![Travel list2 jpeg](https://res.cloudinary.com/djlpfihyu/image/upload/v17
 
 
 ## 🛠 Built With <a name="built-with"></a>
