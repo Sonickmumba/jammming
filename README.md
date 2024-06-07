@@ -219,7 +219,7 @@ If you like this project it a thumb up : 👍 and share this projects with your 
 <!-- > Give credit to everyone who inspired your codebase. -->
 
 I would like to thank...
-- [Gregoire V
+- [Gregoire 
 - **Microverse** for giving the opportunity to learn
 - Code reviewers and coding partners
 - Hat tip to anyone whose code was used
