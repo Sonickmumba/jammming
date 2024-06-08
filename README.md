@@ -223,7 +223,6 @@ I would like to thank...
 - **Microverse** for giving the opportunity to learn
 - Code reviewers and coding partners
 - Hat tip to anyone whose code was used
-  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
