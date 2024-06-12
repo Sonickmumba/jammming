@@ -77,7 +77,6 @@ function App() {
           album: playTrack.track.album.name,
         };
       });
-      // setMyPlaylist(playlistData2);
       setPlaylist(playlistData2);
       setPlaylistId(id); // Added this today
     } catch (error) {
