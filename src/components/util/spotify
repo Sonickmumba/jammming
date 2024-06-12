@@ -64,7 +64,6 @@ const Spotify = {
   //   }
   //   return jsonResponse.tracks.items.map(track => ({
   //     id: track.id,
-  //     name: track.name,
 
 
 
