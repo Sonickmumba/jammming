@@ -136,7 +136,6 @@ const Spotify = {
     // added above ========
 
     // const playlistResponse = await fetch(
-    //   `https://api.spotify.com/v1/users/${userId}/playlists`,
     //   {
 
     await fetch(
