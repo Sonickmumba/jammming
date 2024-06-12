@@ -5,7 +5,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Spotify from "./components/util/spotify";
 import Header from "./components/header/Header";
-// import PlaylistList from "./components/playlistList/PlaylistList";
 
 function App() {
   const [tracks, setTracks] = useState([]);
@@ -17,7 +16,7 @@ function App() {
 
   const [accessToken, setAccessToken] = useState(null);
 
-  const [playlistId, setPlaylistId] = useState(null); // added this today
+  const [playlistId, setPlaylistId] = useState(null);
 
   const handleAddTrackToPlaylist = (e, trackToAdd) => {
     e.preventDefault();
@@ -55,7 +54,7 @@ function App() {
   const handleSavePlaylist = async (e) => {
     e.preventDefault();
     const urls = playlist.map((tr) => tr.uri);
-    await Spotify.savePlaylist(myPlaylistName, urls, playlistId); //added a third parameter today
+    await Spotify.savePlaylist(myPlaylistName, urls, playlistId);
     setPlaylist([]);
   };
 
@@ -77,13 +76,12 @@ function App() {
           album: playTrack.track.album.name,
         };
       });
-      setMyPlaylist(playlistData2);
-      setPlaylistId(id); // Added this today
+      setPlaylist(playlistData2);
+      setPlaylistId(id);
     } catch (error) {
       console.log("Error failed to load playlist tracks:", error);
     }
   };
-  // end for selecting playlist
 
   useEffect(() => {
     const fetchAccessToken = async () => {
