@@ -58,7 +58,6 @@ const Spotify = {
   //       Authorization: `Bearer ${accessToken}`
   //     }
   //   });
-  //   const jsonResponse = await response.json();
 
 
 
