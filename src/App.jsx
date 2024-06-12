@@ -83,7 +83,6 @@ function App() {
       console.log("Error failed to load playlist tracks:", error);
     }
   };
-  // end for selecting playlist
 
   useEffect(() => {
     const fetchAccessToken = async () => {
