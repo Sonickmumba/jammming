@@ -139,7 +139,6 @@ const Spotify = {
     //   `https://api.spotify.com/v1/users/${userId}/playlists`,
     //   {
     //     headers,
-    //     method: "POST",
 
     await fetch(
       `https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`,
