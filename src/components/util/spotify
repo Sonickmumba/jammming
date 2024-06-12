@@ -59,7 +59,6 @@ const Spotify = {
   //     }
   //   });
   //   const jsonResponse = await response.json();
-  //   if (!jsonResponse.tracks) {
 
 
 
