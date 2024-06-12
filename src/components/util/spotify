@@ -51,10 +51,6 @@ const Spotify = {
     }
   },
 
-
-
-
-
   async search(term, accessToken) {
     // const accessToken = await Spotify.getAccessToken();
     const response = await fetch(
