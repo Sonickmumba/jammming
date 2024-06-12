@@ -52,7 +52,7 @@ const Spotify = {
   },
 
   // async search(term) {
-  //   const accessToken = await Spotify.getAccessToken();
+
 
 
 
