@@ -62,7 +62,6 @@ const Spotify = {
   //   if (!jsonResponse.tracks) {
   //     return [];
   //   }
-  //   return jsonResponse.tracks.items.map(track => ({
 
 
 
