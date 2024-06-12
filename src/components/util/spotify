@@ -106,7 +106,6 @@ const Spotify = {
 
     let playlistId;
 
-    // added beow ================
     if (id) {
       // Update existing playlist name
       await fetch(
