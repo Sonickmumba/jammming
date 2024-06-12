@@ -77,7 +77,8 @@ function App() {
           album: playTrack.track.album.name,
         };
       });
-      setMyPlaylist(playlistData2);
+      // setMyPlaylist(playlistData2);
+      setPlaylist(playlistData2);
       setPlaylistId(id); // Added this today
     } catch (error) {
       console.log("Error failed to load playlist tracks:", error);
