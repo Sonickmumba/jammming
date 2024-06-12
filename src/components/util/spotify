@@ -143,7 +143,6 @@ const Spotify = {
     //     body: JSON.stringify({ name: name }),
     //   }
     // );
-    // const playlistJson = await playlistResponse.json();
 
     await fetch(
       `https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`,
