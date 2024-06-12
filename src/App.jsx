@@ -17,7 +17,7 @@ function App() {
 
   const [accessToken, setAccessToken] = useState(null);
 
-  const [playlistId, setPlaylistId] = useState(null); // added this today
+  const [playlistId, setPlaylistId] = useState(null);
 
   const handleAddTrackToPlaylist = (e, trackToAdd) => {
     e.preventDefault();
