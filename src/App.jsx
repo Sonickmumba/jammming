@@ -78,7 +78,7 @@ function App() {
         };
       });
       setPlaylist(playlistData2);
-      setPlaylistId(id); // Added this today
+      setPlaylistId(id);
     } catch (error) {
       console.log("Error failed to load playlist tracks:", error);
     }
