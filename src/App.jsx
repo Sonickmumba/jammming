@@ -17,6 +17,8 @@ function App() {
 
   const [accessToken, setAccessToken] = useState(null);
 
+  const [playlistId, setPlaylistId] = useState(null); // added this today
+
   const handleAddTrackToPlaylist = (e, trackToAdd) => {
     e.preventDefault();
 
@@ -50,16 +52,38 @@ function App() {
     );
   };
 
-  const handleSavePlaylist = (e) => {
+  const handleSavePlaylist = async (e) => {
     e.preventDefault();
     const urls = playlist.map((tr) => tr.uri);
-    Spotify.savePlaylist(myPlaylistName, urls);
+    await Spotify.savePlaylist(myPlaylistName, urls, playlistId); //added a third parameter today
     setPlaylist([]);
   };
 
   const handleChange = (e) => {
     setMyPlaylistName(e.target.value);
   };
+
+  // for selecting playlist
+  const selectPlaylist = async (id) => {
+    console.log(id);
+    try {
+      const playlistData = await Spotify.getPlaylist(id);
+      setMyPlaylistName(playlistData.name);
+      const playlistData2 = playlistData.tracks.items.map((playTrack) => {
+        return {
+          id: playTrack.track.id,
+          name: playTrack.track.name,
+          artist: playTrack.track.artists[0]?.name || "Unknown Artist",
+          album: playTrack.track.album.name,
+        };
+      });
+      setMyPlaylist(playlistData2);
+      setPlaylistId(id); // Added this today
+    } catch (error) {
+      console.log("Error failed to load playlist tracks:", error);
+    }
+  };
+  // end for selecting playlist
 
   useEffect(() => {
     const fetchAccessToken = async () => {
@@ -81,6 +105,8 @@ function App() {
   }, [playlist]);
 
   console.log(error);
+  console.log(playlistId);
+  
 
   return (
     <>
@@ -91,6 +117,8 @@ function App() {
           <TrackList
             tracks={tracks}
             handleAddTrackToPlaylist={handleAddTrackToPlaylist}
+            // add now
+            selectPlaylist={selectPlaylist}
           />
           <Playlist
             playlist={playlist}

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import React from 'react'
 
 import { useState, useEffect } from "react";
@@ -5,7 +6,7 @@ import Spotify from "../util/spotify";
 import PlaylistListItem from "./PlaylistListItem";
 import styles from "./PlaylistList.module.css";
 
-const PlaylistList = () => {
+const PlaylistList = ({ selectPlaylist }) => {
   const [playlists, setPlaylists] = useState([]);
 
   const getUserPlaylists = async () => {
@@ -25,7 +26,7 @@ const PlaylistList = () => {
 
   useEffect(() => {
     getUserPlaylists();
-  }, []);
+  }, []); 
 
   return (
     <div id={styles["local-playlists-div"]}>
@@ -36,6 +37,7 @@ const PlaylistList = () => {
             id={playlist.playlistId}
             name={playlist.playlistName}
             key={playlist.playlistId}
+            selectPlaylist={selectPlaylist}
           />
         ))}
       </div>

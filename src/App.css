@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  padding: 0.37rem 0;
+  padding: 0.57rem 0;
   background-color: #010c3f;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -54,7 +54,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 37%;
   padding: 2.27rem 1.16rem;
   background-color: rgba(1, 12, 63, 0.7);
@@ -183,10 +183,10 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding-top: 1.94rem;
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .search-input {
