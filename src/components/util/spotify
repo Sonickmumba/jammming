@@ -135,7 +135,6 @@ const Spotify = {
     }
     // added above ========
 
-    // const playlistResponse = await fetch(
 
 
     await fetch(
