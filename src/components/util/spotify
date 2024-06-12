@@ -69,7 +69,7 @@ const Spotify = {
   //     album: track.album.name,
   //     uri: track.uri
   //   }));
-  // },
+
 
   async search(term, accessToken) {
     // const accessToken = await Spotify.getAccessToken();
