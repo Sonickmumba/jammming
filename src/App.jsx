@@ -55,7 +55,7 @@ function App() {
   const handleSavePlaylist = async (e) => {
     e.preventDefault();
     const urls = playlist.map((tr) => tr.uri);
-    await Spotify.savePlaylist(myPlaylistName, urls, playlistId); //added a third parameter today
+    await Spotify.savePlaylist(myPlaylistName, urls, playlistId);
     setPlaylist([]);
   };
 
