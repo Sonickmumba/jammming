@@ -112,6 +112,7 @@ const Spotify = {
       playlistId = playlistJson.id;
       console.log('Created new playlist')
     }
+    console.log(playlistId);
 
     await fetch(
       `https://api.spotify.com/v1/users/${userId}/playlists/${playlistId}/tracks`,
