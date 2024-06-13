@@ -81,7 +81,7 @@ It is built using React, Javascript, HTML, CSS3
 <!-- > Describe between 1-3 key features of the application. -->
 
 - **[Users can search for songs by song title]**
-- **[Show how much is owed by a person]**
+- **[Users can see information about each song like title, artist, and album for songs they queried]**
 - **[bill form]**
 - **[Add friend layout]**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
