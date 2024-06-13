@@ -221,7 +221,7 @@ If you like this project it a thumb up : 👍 and share this projects with your 
 
 I would like to thank...
 - [
-- **Microverse** for giving the opportunity to learn
+- **Codecademy** for giving the opportunity to learn
 - Code reviewers and coding partners
 - Hat tip to anyone whose code was used
 
