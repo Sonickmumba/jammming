@@ -131,7 +131,7 @@ Install this project with:
 <!-- Example command: -->
 
 ```
-  cd eat-and-split
+  cd jammming
   bundle install
 ```
 
