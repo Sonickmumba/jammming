@@ -80,7 +80,7 @@ It is built using React, Javascript, HTML, CSS3
 
 <!-- > Describe between 1-3 key features of the application. -->
 
-- **[eat and split page]**
+- **[Users can search for songs by song title]**
 - **[Show how much is owed by a person]**
 - **[bill form]**
 - **[Add friend layout]**
