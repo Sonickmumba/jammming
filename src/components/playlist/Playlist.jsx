@@ -39,7 +39,7 @@ const Playlist = ({
         ))}
       </div>
 
-      <div className="div-button">
+      <div className={styles.divButton}>
         <button type="submit">Save to spotify</button>
       </div>
     </form>

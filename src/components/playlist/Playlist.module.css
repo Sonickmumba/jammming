@@ -55,3 +55,32 @@
   font-weight: 300;
   color: rgba(256, 256, 256, 0.8);
 }
+
+.addButton {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.05rem;
+  transition: color 0.25s;
+  margin-right: 20px;
+}
+
+.divButton {
+  display: flex;
+  width: 350px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.divButton button {
+  cursor: pointer;
+  width: 10rem;
+  padding: 0.77rem 0;
+  border: none;
+  border-radius: 54px;
+  margin-top: 1.27rem;
+  background-color: #6c41ec;
+  text-align: center;
+  font-size: 0.83rem;
+  transition: background-color 0.25s;
+  color: #fff;
+}
