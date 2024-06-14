@@ -11,7 +11,7 @@ const PlaylistListItem = ({ id, name, selectPlaylist }) => {
       key={id}
       onClick={() => selectPlaylist(id)}
     >
-      <div className="artist-album" id="local-playlist-name">
+      <div className={styles.artistAlbum} id={styles.localPlaylistName}>
         <p>{name}</p>
       </div>
     </div>

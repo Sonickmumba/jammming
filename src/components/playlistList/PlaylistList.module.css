@@ -20,3 +20,25 @@
   border-bottom: 1px solid rgba(256, 256, 256, 0.8);
   cursor: pointer;
 }
+
+.artistAlbum {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 72px;
+}
+
+.artistAlbum h3 {
+  margin-bottom: 0.2rem;
+}
+
+.artistAlbum p {
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: rgba(256, 256, 256, 0.8);
+}
+
+#localPlaylistName {
+  height: 50px;
+}
