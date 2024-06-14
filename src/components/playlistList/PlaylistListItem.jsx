@@ -6,7 +6,7 @@ import styles from "./PlaylistList.module.css";
 const PlaylistListItem = ({ id, name, selectPlaylist }) => {
   return (
     <div
-      className="card"
+      className={styles.card}
       id="local-playlist-card"
       key={id}
       onClick={() => selectPlaylist(id)}
