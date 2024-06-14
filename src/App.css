@@ -264,7 +264,7 @@ body {
   box-shadow: 0 4px 2px 2px #000;
 }
 
-#playlist-name {
+/* #playlist-name {
   width: 100%;
   border: 0;
   outline: 0;
@@ -279,9 +279,9 @@ body {
   width: 100%;
   max-height: 370px;
   overflow-y: auto;
-}
+} */
 
-.list-container .track-name {
+/* .list-container .track-name {
   height: 30px;
   border: none;
   font-size: 1em;
@@ -291,9 +291,9 @@ body {
   margin-right: 5px;
   border: none;
   font-size: 10px;
-}
+} */
 
-.track-art-alb::after {
+/* .track-art-alb::after {
   content: "|";
   margin-left: 5px;
   margin-right: 5px;
@@ -301,7 +301,7 @@ body {
 
 .list-container input:focus {
   outline: none;
-}
+} */
 
 /* .results {
   font-size: 1.55rem;
