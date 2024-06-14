@@ -1,8 +1,9 @@
 // import React from 'react'
+import styles from './Header.module.css'
 
 const Header = () => {
   return (
-    <h1>Ja<span className="color-ms">mmm</span>ing</h1>
+    <h1>Ja<span className={styles.color}>mmm</span>ing</h1>
   )
 }
 
