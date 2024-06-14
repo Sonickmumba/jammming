@@ -7,7 +7,7 @@ const PlaylistListItem = ({ id, name, selectPlaylist }) => {
   return (
     <div
       className={styles.card}
-      id="local-playlist-card"
+      id={styles.localPlaylistCard}
       key={id}
       onClick={() => selectPlaylist(id)}
     >
