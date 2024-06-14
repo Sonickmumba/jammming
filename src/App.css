@@ -353,16 +353,16 @@ body {
   color: rgba(256, 256, 256, 0.8);
 } */
 
-.add-button,
+/* .add-button,
 .remove-button {
   cursor: pointer;
   padding: 0.5rem;
   font-size: 1.05rem;
   transition: color 0.25s;
   margin-right: 20px;
-}
+} */
 
-.div-button {
+/* .div-button {
   display: flex;
   width: 350px;
   justify-content: center;
@@ -381,7 +381,7 @@ body {
   font-size: 0.83rem;
   transition: background-color 0.25s;
   color: #fff;
-}
+} */
 
 /* search bar */
 
