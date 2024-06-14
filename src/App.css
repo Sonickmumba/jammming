@@ -330,10 +330,10 @@ body {
   height: 50px;
 }
 
-#playlistList-container {
+/* #playlistList-container {
   max-height: 150px;
   overflow-y: auto;
-}
+} */
 
 .artist-album {
   flex-grow: 1;
