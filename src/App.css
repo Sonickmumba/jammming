@@ -75,23 +75,7 @@ h1 {
   overflow-y: auto;
 } */
 
-.list-container .track-name {
-  height: 30px;
-  border: none;
-  font-size: 1em;
-}
 
-.track-art-alb {
-  margin-right: 5px;
-  border: none;
-  font-size: 10px;
-}
-
-.track-art-alb::after {
-  content: "|";
-  margin-left: 5px;
-  margin-right: 5px;
-}
 
 /* Base styles */
 body {
