@@ -47,7 +47,7 @@ h1 {
   box-shadow: 0 4px 2px #000;
 }
 
-.list-container {
+/* .list-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,9 +56,9 @@ h1 {
   padding: 2.27rem 1.16rem;
   background-color: rgba(1, 12, 63, 0.7);
   box-shadow: 0 4px 2px 2px #000;
-}
+} */
 
-#playlist-name {
+/* #playlist-name {
   width: 100%;
   border: 0;
   outline: 0;
@@ -67,7 +67,7 @@ h1 {
   font-family: "Poppins", sans-serif;
   font-size: 1.55rem;
   color: #fff;
-}
+} */
 
 .Playlist-track-container {
   width: 100%;

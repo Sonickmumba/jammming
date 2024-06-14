@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 // import { useState } from "react";
+import styles from './Playlist.module.css';
 
 
 const Playlist = ({
@@ -10,16 +11,16 @@ const Playlist = ({
   myPlaylistName,
 }) => {
   return (
-    <form className="list-container" onSubmit={handleSavePlaylist}>
+    <form className={styles.listContainer} onSubmit={handleSavePlaylist}>
       <input
         name="playlistName"
         type="text"
         placeholder=""
-        id="playlist-name"
+        id={styles.playlistName}
         value={myPlaylistName}
         onChange={handleChange}
       />
-      <div className="Playlist-track-container">
+      <div className={styles.PlaylistTrackContainer}>
         {myPlaylist.map((item) => (
           <div className="card" key={item.id}>
             <div className="artist-album">
