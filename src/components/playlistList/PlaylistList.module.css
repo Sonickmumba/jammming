@@ -4,3 +4,8 @@
   bottom: 30px;
   margin-top: 80px;
 }
+
+#playlistListContainer {
+  max-height: 150px;
+  overflow-y: auto;
+}

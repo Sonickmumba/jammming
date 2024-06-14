@@ -31,7 +31,7 @@ const PlaylistList = ({ selectPlaylist }) => {
   return (
     <div id={styles["local-playlists-div"]}>
       <h2>My Local Playlists</h2>
-      <div id="playlistList-container">
+      <div id={styles.playlistListContainer}>
         {playlists.map((playlist) => (
           <PlaylistListItem
             id={playlist.playlistId}
