@@ -29,7 +29,7 @@ const PlaylistList = ({ selectPlaylist }) => {
   }, []); 
 
   return (
-    <div id={styles["local-playlists-div"]}>
+    <div id={styles.localPlaylistsDiv}>
       <h2>My Local Playlists</h2>
       <div id={styles.playlistListContainer}>
         {playlists.map((playlist) => (
