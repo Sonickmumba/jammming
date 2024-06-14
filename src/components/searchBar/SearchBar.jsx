@@ -1,6 +1,7 @@
 // import React from 'react'
 import PropTypes from "prop-types";
 import { useState } from "react";
+import styles from './SearchBar.module.css';
 
 const SearchBar = ({ handleSearch }) => {
   const [query, setQuery] = useState("");
@@ -16,15 +17,15 @@ const SearchBar = ({ handleSearch }) => {
   };
 
   return (
-    <form className="search-container" onSubmit={handleSubmit}>
+    <form className={styles.searchContainer} onSubmit={handleSubmit}>
       <input
         type="text"
-        className="search-input"
+        className={styles.searchInput}
         placeholder="Search track name"
         value={query}
         onChange={handleChange}
       />
-      <button className="search-button" type="submit">
+      <button className={styles.searchButton} type="submit">
         Search
       </button>
     </form>
