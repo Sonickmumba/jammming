@@ -1,14 +1,15 @@
 import PropTypes from "prop-types";
 import PlaylistList from "../playlistList/PlaylistList";
+import styles from './TrackList.module.css';
 
 const TrackList = ({ tracks, handleAddTrackToPlaylist, selectPlaylist }) => {
   return (
-    <div className="results-container">
-      <h2 className="results">Results</h2>
-      <div className="TrackList-co">
+    <div className={styles.resultsContainer}>
+      <h2 className={styles.results}>Results</h2>
+      <div className={styles.TrackListCo}>
         {tracks.map((track) => (
-          <div className="card" key={track.id}>
-            <div className="artist-album">
+          <div className={styles.card} key={track.id}>
+            <div className={styles.artistAlbum}>
               <h3>{track.name}</h3>
               <p>
                 {track.artist} | {track.album}
