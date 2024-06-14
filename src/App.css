@@ -221,8 +221,6 @@ body {
   height: 100vh;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -247,13 +245,13 @@ body {
   margin: 0 auto;
 }
 
-.results-container {
+/* .results-container {
   width: 50%;
   height: 550px;
   padding: 0.88rem;
   background-color: rgba(1, 12, 63, 0.7);
   box-shadow: 0 4px 2px #000;
-}
+} */
 
 .list-container {
   display: flex;
@@ -309,11 +307,11 @@ body {
   font-size: 1.55rem;
 } */
 
-.TrackList-co {
+/* .TrackList-co {
   width: 100%;
   max-height: 300px;
   overflow-y: auto;
-}
+} */
 
 /* .card {
   display: flex;
