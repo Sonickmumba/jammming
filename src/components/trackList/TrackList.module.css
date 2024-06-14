@@ -39,3 +39,11 @@
   font-weight: 300;
   color: rgba(256, 256, 256, 0.8);
 }
+
+.addButton {
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1.05rem;
+  transition: color 0.25s;
+  margin-right: 20px;
+}

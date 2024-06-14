@@ -16,7 +16,7 @@ const TrackList = ({ tracks, handleAddTrackToPlaylist, selectPlaylist }) => {
               </p>
             </div>
             <a
-              className="add-button"
+              className={styles.addButton}
               id={track.id}
               onClick={(e) => handleAddTrackToPlaylist(e, track)}
             >
