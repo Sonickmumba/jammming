@@ -69,11 +69,11 @@ h1 {
   color: #fff;
 } */
 
-.Playlist-track-container {
+/* .Playlist-track-container {
   width: 100%;
   max-height: 370px;
   overflow-y: auto;
-}
+} */
 
 .list-container .track-name {
   height: 30px;
@@ -93,9 +93,9 @@ h1 {
   margin-right: 5px;
 }
 
-.list-container input:focus {
+/* .list-container input:focus {
   outline: none;
-}
+} */
 
 .results {
   font-size: 1.55rem;
@@ -107,11 +107,11 @@ h1 {
   overflow-y: auto;
 }
 
-.card {
+/* .card {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(256, 256, 256, 0.8);
-}
+} */
 
 #local-playlist-card {
   border-bottom: 1px solid rgba(256, 256, 256, 0.8);
@@ -127,15 +127,15 @@ h1 {
   overflow-y: auto;
 }
 
-.artist-album {
+/* .artist-album {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 72px;
-}
+} */
 
-.artist-album h3 {
+/* .artist-album h3 {
   margin-bottom: 0.2rem;
 }
 
@@ -143,7 +143,7 @@ h1 {
   font-size: 0.83rem;
   font-weight: 300;
   color: rgba(256, 256, 256, 0.8);
-}
+} */
 
 .add-button,
 .remove-button {

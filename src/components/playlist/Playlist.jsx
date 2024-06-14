@@ -22,15 +22,15 @@ const Playlist = ({
       />
       <div className={styles.PlaylistTrackContainer}>
         {myPlaylist.map((item) => (
-          <div className="card" key={item.id}>
-            <div className="artist-album">
+          <div className={styles.card} key={item.id}>
+            <div className={styles.artistAlbum}>
               <h3>{item.name}</h3>
               <p>
                 {item.artist} | {item.album}
               </p>
             </div>
             <a
-              className="add-button"
+              className={styles.addButton}
               onClick={(e) => handleRemoveTrack(e, item)}
             >
               -
