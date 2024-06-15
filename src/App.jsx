@@ -102,6 +102,8 @@ function App() {
     setMyPlaylist(playlist);
   }, [playlist]);
 
+  console.log(error);
+
   return (
     <>
       <Header />
