@@ -84,3 +84,11 @@
   transition: background-color 0.25s;
   color: #fff;
 }
+
+@media (max-width: 480px) {
+  .listContainer {
+    width: 92%;
+    margin-bottom: 1rem;
+  }
+
+}

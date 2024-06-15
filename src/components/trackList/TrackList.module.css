@@ -49,11 +49,9 @@
 }
 
 @media (max-width: 480px) {
-  
   .resultsContainer {
     width: 92%;
     margin-bottom: 1rem;
   }
 
-  
 }
