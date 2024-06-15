@@ -47,3 +47,13 @@
   transition: color 0.25s;
   margin-right: 20px;
 }
+
+@media (max-width: 480px) {
+  
+  .resultsContainer {
+    width: 92%;
+    margin-bottom: 1rem;
+  }
+
+  
+}

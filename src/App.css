@@ -47,7 +47,7 @@ body {
 
 /* Responsive design */
 
-@media (max-width: 1200px) {
+@media (max-width: 480px) {
   .track-play-list-container {
     flex-direction: column;
     width: 90%;
@@ -58,4 +58,30 @@ body {
     width: 100%;
     margin-bottom: 1rem;
   }
+
+  .app-container {
+    height: 100%;
+  }
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .results-container,
+  .list-container {
+    padding: 0.5rem;
+  }
+
+  .search-input {
+    width: 80%;
+  }
+
+  .search-button {
+    width: auto;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
