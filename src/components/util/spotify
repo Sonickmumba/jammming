@@ -1,5 +1,6 @@
 const clientId = "9e17ed2b2ad0412390528ef37a97e281";
-const redirectUri = "http://localhost:5173/?/callback";
+// const redirectUri = "http://localhost:5173/?/callback";
+const redirectUri = "https://lets-jamm.netlify.app"
 
 let accessToken;
 let userId;
@@ -97,7 +98,7 @@ const Spotify = {
         }
       );
       playlistId = id;
-      console.log('Name updated')
+      console.log("Name updated");
     } else {
       // Create new playlist
       const playlistResponse = await fetch(
@@ -110,7 +111,7 @@ const Spotify = {
       );
       const playlistJson = await playlistResponse.json();
       playlistId = playlistJson.id;
-      console.log('Created new playlist')
+      console.log("Created new playlist");
     }
     console.log(playlistId);
 
