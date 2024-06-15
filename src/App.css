@@ -46,3 +46,16 @@ body {
 }
 
 /* Responsive design */
+
+@media (max-width: 1200px) {
+  .track-play-list-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .results-container,
+  .list-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
