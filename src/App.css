@@ -43,65 +43,6 @@ body {
   width: 100%;
   max-height: 370px;
   overflow-y: auto;
-} */
+}
 
 /* Responsive design */
-@media (max-width: 1200px) {
-  .track-play-list-container {
-    flex-direction: column;
-    width: 90%;
-  }
-
-  .results-container,
-  .list-container {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .results-container,
-  .list-container {
-    padding: 0.5rem;
-  }
-
-  .search-input {
-    width: 80%;
-  }
-
-  .search-button {
-    width: auto;
-    padding: 0.5rem 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.25rem;
-    padding: 0.5rem;
-  }
-
-  .track-play-list-container {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .results-container,
-  .list-container {
-    padding: 0.25rem;
-    height: auto;
-  }
-
-  .div-button {
-    width: 100%;
-  }
-
-  .div-button button {
-    width: 100%;
-  }
-}
-
