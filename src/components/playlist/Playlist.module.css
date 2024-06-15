@@ -8,7 +8,7 @@
   width: 37%;
   padding: 2.27rem 1.16rem;
   background-color: rgba(1, 12, 63, 0.7);
-  box-shadow: 0 4px 2px 2px #000;
+  box-shadow: 0 4px 2px #000;
 }
 
 #playlistName {
@@ -90,5 +90,4 @@
     width: 90%;
     margin-bottom: 2rem;
   }
-
 }
