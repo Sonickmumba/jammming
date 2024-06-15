@@ -111,7 +111,6 @@ function App() {
           <TrackList
             tracks={tracks}
             handleAddTrackToPlaylist={handleAddTrackToPlaylist}
-            // add now
             selectPlaylist={selectPlaylist}
           />
           <Playlist
