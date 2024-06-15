@@ -19,6 +19,7 @@ body {
   font-weight: 500;
   color: #fff;
   padding-top: 10px;
+  scroll-behavior: smooth;
 }
 
 .track-play-list-container {
