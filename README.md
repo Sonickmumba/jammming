@@ -30,6 +30,7 @@
 **Jammming App** is a web application is that allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account.
 It is built using React, Javascript, HTML, CSS3
 
+![https://res.cloudinary.com/djlpfihyu/image/upload/v1718530661/Screenshot_50_jzgbwj.png](https://res.cloudinary.com/djlpfihyu/image/upload/v1718530661/Screenshot_50_jzgbwj.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
