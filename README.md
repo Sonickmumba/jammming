@@ -162,7 +162,7 @@ You can deploy this project using:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://eatssplit-sonick.netlify.app)
+- [Live Demo Link](https://lets-jamm.netlify.app)
 <!-- - Comming soon -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
