@@ -2,11 +2,9 @@ import TrackList from "./components/trackList/TrackList";
 import SearchBar from "./components/searchBar/SearchBar";
 import Playlist from "./components/playlist/Playlist";
 import "./App.css";
-// import 'dotenv/config'
 import { useState, useEffect } from "react";
 import Spotify from "./components/util/spotify";
 import Header from "./components/header/Header";
-
 
 function App() {
   // console.log(process.env)

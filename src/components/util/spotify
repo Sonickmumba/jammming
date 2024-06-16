@@ -6,7 +6,7 @@ const redirectUri = "https://lets-jamm.netlify.app"
 // const redirectUri = process.env.REACT_APP_SPOTIFY_REDIRECT_URI || window.location.origin
 
 // Now you can use `clientId` and `redirectUri` in your code
-console.log(clientId)
+// console.log(clientId)
 
 let accessToken;
 let userId;
