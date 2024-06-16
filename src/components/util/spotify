@@ -1,12 +1,12 @@
-// const clientId = "9e17ed2b2ad0412390528ef37a97e281";
+const clientId = "9e17ed2b2ad0412390528ef37a97e281";
 // const redirectUri = "http://localhost:5173/?/callback";
-// const redirectUri = "https://lets-jamm.netlify.app"
+const redirectUri = "https://lets-jamm.netlify.app"
 
-const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
-const redirectUri = process.env.REACT_APP_SPOTIFY_REDIRECT_URI || window.location.origin;
+// const clientId = process.env.REACT_APP_SPOTIFY_CLIENT_ID
+// const redirectUri = process.env.REACT_APP_SPOTIFY_REDIRECT_URI || window.location.origin
 
 // Now you can use `clientId` and `redirectUri` in your code
-
+console.log(clientId)
 
 let accessToken;
 let userId;
