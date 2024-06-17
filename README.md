@@ -88,7 +88,7 @@ It is built using React, Javascript, HTML, CSS3
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-- [Live demo Link](https://eatssplit-sonick.netlify.a)
+- [Live demo Link](https://eatssplit-sonick.netlifa)
 
 ## 🚀 Live video <a name="live-video"></a>
 <!-- - [Live video Link](https://chimerical-tiramisu-7bd6e3.netlify.app/) -->
