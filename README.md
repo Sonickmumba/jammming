@@ -88,7 +88,7 @@ It is built using React, Javascript, HTML, CSS3
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-- [Live demo Link](httpsea)
+- [Live demo Link](httpse)
 
 ## 🚀 Live video <a name="live-video"></a>
 <!-- - [Live video Link](https://chimerical-tiramisu-7bd6e3.netlify.app/) -->
