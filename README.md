@@ -91,7 +91,7 @@ It is built using React, Javascript, HTML, CSS3
 - 
 
 ## 🚀 Live video <a name="live-video"></a>
-<!-- - [Live video Link](https://chimerical-tiramisu-7bd6e3.netlify.app/) -->
+<!-- - [Live video Link](https://chimerical-tiramisu-7bd6e3.netlifyapp/) -->
 - Coming soon
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
