@@ -84,7 +84,7 @@ It is built using React, Javascript, HTML, CSS3
 - **[Users can search for songs by song title]**
 - **[Users can see information about each song like title, artist, and album for songs they queried]**
 - **[Users can export their custom playlist to their personal Spotify account]**
-- **[Add 
+- **[Add
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
