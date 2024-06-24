@@ -190,7 +190,7 @@ You can deploy this project using:
 - [ ] **[Add login to the app.]**
 - [ ] **[implement some UX improvements: include transitions and/or animations, etc]**
 - [ ] **[Add a footer]**
-- [ ] **[Add a footer]**
+- [ ] **[Responsive to all screen sizes]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
